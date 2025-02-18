@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>安易智-新闻中心</title>
+    <link rel="icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <style type="text/css">
+      .lunbotu {
+        width: 100%;
+        height: 480px;
+        background: url(./img/newsHeads.jpg);
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+
+      .middle {
+        margin-top: 30px;
+        display: flex;
+      }
+
+      .nav2 {
+        width: 200px;
+      }
+
+      .title-h1 {
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1px solid #f0f0f0;
+        height: 36px;
+      }
+
+      .news-content {
+        width: 90%;
+        max-width: 1200px;
+        margin: 24px auto;
+        min-height: 300px;
+      }
+
+      .news-content h3 {
+        width: 90%;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      .title-hy {
+        color: #999999;
+      }
+
+      .content {
+        width: 100%;
+        margin-left: 8%;
+      }
+
+      /* 详情 */
+      .detail {
+        padding-left: 20px;
+      }
+
+      .detail .detail-title {
+        font-size: 36px;
+        font-weight: 600;
+        color: #2e2e2e;
+      }
+
+      .detail .detail-time {
+        margin-top: 28px;
+        font-size: 14px;
+        color: #9e9e9e;
+      }
+
+      .detail .detail-tab {
+        margin-top: 8px;
+        padding: 4px 10px;
+        border-radius: 5px;
+        background: #f0ffeb;
+        display: inline-block;
+        color: #1ea525;
+        border: 1px solid #1ea525;
+      }
+
+      .detail .detail-content {
+        margin-top: 40px;
+        font-size: 14px;
+        color: #444444;
+      }
+
+      .detail .detail-img {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      /* 上一篇 下一篇 */
+      .UpDown {
+        margin-top: 64px;
+        font-size: 14px;
+        color: #9e9e9e;
+        display: flex;
+      }
+
+      .UpDown .Jump {
+        cursor: pointer;
+        width: 50%;
+      }
+
+      .industry-item {
+        font-size: 14px;
+        color: #666666;
+        width: 48%;
+        height: 530px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 1px solid #cccccc;
+        margin-top: 32px;
+      }
+
+      .industry-item:nth-child(2),
+      .industry-item:nth-child(1) {
+        margin-top: 0;
+      }
+
+      .article-img {
+        width: 100%;
+        height: 360px;
+        background-color: #ccc;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .article-title {
+        color: #2e2e2e;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 0 !important;
+      }
+
+      .industry-item p {
+        margin: 10px 0;
+        /* height: 80px; */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /*  超出多少行 */
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+
+      .paging {
+        width: 164px;
+      }
+
+      .paging > li,
+      .previous,
+      .next {
+        display: inline-block;
+
+        width: 33px;
+        height: 32px;
+        border-radius: 2px;
+        color: #909399;
+        background-color: #f6faf5;
+        text-align: center;
+        cursor: pointer;
+        margin: 20px 4px;
+        line-height: 32px;
+      }
+
+      .paging > li:hover,
+      .next:hover,
+      .previous:hover {
+        background: #1ea525;
+        color: #ffffff;
+      }
+
+      .active-page {
+        background: #1ea525 !important;
+        color: #ffffff !important;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="nav">
+      <a
+        href="./index.html"
+        style="display: inline-block; cursor: pointer; z-index: 100"
+      >
+        <div class="nav-title">
+          <img style="width: 24px; height: 24px" src="./img/logo.svg" />安易智
+        </div>
+      </a>
+      <div class="menu">
+        <ul>
+          <li><a href="./index.html">首页</a></li>
+          <li><a href="./underwritingSystem.html">承统系统</a></li>
+          <li><a href="./claimsSystem.html">补偿系统</a></li>
+          <li><a href="./mobileoperatingSystem.html">移动作业</a></li>
+          <li class="active"><a href="./NewsCenter.html">新闻中心</a></li>
+          <li><a href="./aboutUs.htm">关于我们</a></li>
+        </ul>
+      </div>
+      <ul class="menu2">
+        <li><a href="./index.html">首页</a></li>
+        <li><a href="./underwritingSystem.html">承统系统</a></li>
+        <li><a href="./claimsSystem.html">补偿系统</a></li>
+        <li><a href="./mobileoperatingSystem.html">移动作业</a></li>
+        <li class="active"><a href="./NewsCenter.html">新闻中心</a></li>
+        <li><a href="./aboutUs.htm">关于我们</a></li>
+      </ul>
+    </div>
+    <div class="lunbotu"></div>
+    <div class="news-content">
+      <p>首页 / 新闻中心 / <span class="subtitle">公司新闻</span></p>
+      <div class="middle">
+        <div class="nav2">
+          <h1 class="title-h1">新闻类别</h1>
+          <h3 class="title-gs">公司新闻</h3>
+          <h3 class="title-hy">行业新闻</h3>
+        </div>
+        <div class="content">
+          <div class="detail">
+            <h1 id="title" class="detail-title"></h1>
+            <div id="time" class="detail-time"></div>
+            <div class="detail-tab">行业新闻</div>
+            <div id="content" class="detail-content"></div>
+            <div class="detail-img">
+              <img
+                id="detailofimg"
+                style="width: 600px; height: 318px"
+                src=""
+              />
+            </div>
+            <!-- 公司新闻 -->
+            <div class="company"></div>
+
+            <!-- 上一篇 下一篇 -->
+            <div class="UpDown">
+              <div id="Up" class="Jump">上一篇</div>
+              <div id="Down" class="Jump">下一篇</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="boottom">
+      <div
+        style="
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+        "
+      >
+        <div class="boottom-content">
+          <div>
+            <h3>产品中心</h3>
+            <p><a href="./underwritingSystem.html">承统系统</a></p>
+            <p><a href="./claimsSystem.html">补偿系统</a></p>
+            <p><a href="./mobileoperatingSystem.html">移动作业</a></p>
+          </div>
+          <div>
+            <h3>新闻中心</h3>
+            <p><a href="./NewsCenter.html">新闻公司</a></p>
+            <p><a href="./NewsCenter.html">行业新闻</a></p>
+          </div>
+          <div>
+            <h3>关于我们</h3>
+            <p><a href="./aboutUs.htm">团队介绍</a></p>
+          </div>
+          <div>
+            <h3>联系我们</h3>
+            <p>官方邮箱：anyizhi888@foxmail.com</p>
+            <p>QQ：1624924890</p>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          width: 90%;
+          max-width: 1200px;
+          height: 1px;
+          background-color: #4d4d4d;
+          margin: 0 auto;
+          margin-bottom: 38px;
+        "
+      ></div>
+      <div style="color: #9e9e9e; text-align: center; width: 100%">
+        安易智@2018~2023版权所有
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/NewsDetail.js"></script>
+    <script>
+      // 点击行业新闻或点击公司新闻
+      var gs = document.querySelector(".title-gs");
+      var hy = document.querySelector(".title-hy");
+      var industry = document.querySelector(".industry");
+      var company = document.querySelector(".content");
+      var subtitle = document.querySelector(".subtitle");
+      hy.style.fontWeight = 600;
+      gs.style.color = "#999999";
+      hy.style.color = "#2E2E2E";
+      gs.onclick = function () {
+        gs.style.fontWeight = 600;
+        hy.style.fontWeight = 400;
+        hy.style.color = "#999999";
+        gs.style.color = "#2E2E2E";
+        subtitle.innerHTML = "公司新闻";
+        company.style.display = "none";
+        console.log("123", company);
+      };
+      hy.onclick = function () {
+        hy.style.fontWeight = 600;
+        gs.style.fontWeight = 400;
+        gs.style.color = "#999999";
+        hy.style.color = "#2E2E2E";
+        subtitle.innerHTML = "行业新闻";
+        company.style.display = "block";
+      };
+
+      const setContent = function () {
+        console.log("12121", sessionStorage.getItem("NewsCenterKey"));
+        let key = sessionStorage.getItem("NewsCenterKey");
+        let newsDetail = dataArr[key];
+        console.log("newsDetail", newsDetail, key);
+        //  设置标题
+        document.getElementById("title").innerHTML = newsDetail.title;
+        //  设置时间
+        document.getElementById("time").innerHTML = newsDetail.time;
+        console.log("11", document.getElementById("detailofimg").src);
+        document.getElementById("detailofimg").src = newsDetail.img;
+        // 设置内容
+        let contentDiv = document.getElementById("content");
+        contentDiv.innerHTML = "";
+        console.log(1);
+        for (let i = 0; i < newsDetail.content.length; i++) {
+          let div = document.createElement("div");
+
+          div.innerHTML = "&emsp;&emsp;" + newsDetail.content[i] + "<br/><br/>";
+          contentDiv.appendChild(div);
+        }
+      };
+      // 渲染新闻详情 数据
+      if (sessionStorage.getItem("NewsCenterKey")) {
+        setContent();
+      }
+
+      document.getElementById("Up").onclick = function () {
+        console.log(sessionStorage.getItem("NewsCenterKey"));
+        if (sessionStorage.getItem("NewsCenterKey") != 0) {
+          sessionStorage.setItem(
+            "NewsCenterKey",
+            sessionStorage.getItem("NewsCenterKey") - 1
+          );
+          setContent();
+        }
+      };
+      document.getElementById("Down").onclick = function () {
+        console.log("dataArr", sessionStorage.getItem("NewsCenterKey"));
+        if (sessionStorage.getItem("NewsCenterKey") != dataArr.length - 1) {
+          sessionStorage.setItem(
+            "NewsCenterKey",
+            Number(sessionStorage.getItem("NewsCenterKey")) + 1
+          );
+          setContent();
+        }
+      };
+      // console.log(contentDiv);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<p>首先，这个问题的原因跟vue无关，是vite引用只支持import，require是隔壁webpack的引用方式，</p>
+<p>vite用自身的url可以用import.meta.url来拼装项目路径，如下：</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202309/2001819-20230904135842149-933047754.png" alt="" loading="lazy" /></p>
+<p>这个原理只不过是在发布的地址上去找对应图片，而且只会找项目中public文件夹下的图片资源，assets文件夹下的图片资源找不到</p>
+<p><span style="background-color: #ffff00;">（原因是public文件夹下的资源会随项目发布成单独资源，assets下的图片资源都是本地的相对路径，服务器发布就找不到了）</span></p>
+<p>&nbsp; 所以，</p>
+<p>1. 首先把图片放public下</p>
+<p>2. 用上述vite下的require函数引入图片即可使用</p>
+<p>另外，建议用svg直接作图，svg的icon可以直接引用，毕竟是直接画在页面上的代码级别的。</p>

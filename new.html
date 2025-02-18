@@ -1,0 +1,55 @@
+<script>
+//     function Person(name, age, height,address) {
+//     this.name = name
+//     this.age = age
+//     this.height = height
+//     this.address = address
+//     this.coding = function () {console.log(this.name + "coding")}
+//     this.eating = function () {console.log(this.name + "eating")}
+// }
+
+// // 会造成内存空间浪费
+// let wc = new Person("wc", 11,180,"bj")
+// let xq = new Person("xq", 12,150,"xj")
+
+// // 使用原型，将公有属性放到原型对象__proto__里
+// // 所有对象都有__proto__属性（隐式原型）
+// // 所有构造器类（函数）中都有ProtoType属性（显式原型）（chrome上是ProtoType）
+// // 公有属性：所有__proto__下的属性都是公有属性
+// // 私有属性：自定义的属性
+// let obj = { name: 'wc', age: 18}
+// obj.hasOwnProperty('name')
+
+// let i = 0
+// Object.defineProperty(window, "a", {
+//     get() {
+//         return ++i;
+//     }
+// })
+// if (a == 1 && a == 2 && a ==3 ) {
+//     console.log('ok')
+// }
+
+function _new(Ctor, ...args) {
+    // let obj = {}
+    // obj.__proto__ = Ctor.prototype
+    // 判断Ctor是否是构造器（是否有显式原型）
+    if (!Ctor.hasOwnProperty("prototype")) {
+        throw new TypeError(`"Ctor并不是一个构造器"`)
+    }
+    let obj = Object.create(Ctor.prototype)
+    let getObj = Ctor.apply(obj, args)
+    // 避免构造器返回对象
+    if (getObj != null && (typeof getObj == 'object' || typeof getObj == 'function')) {
+        return getObj
+    }
+    return obj
+}
+
+function Dog() {
+
+}
+
+
+
+</script>

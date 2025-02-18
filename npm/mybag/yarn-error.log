@@ -1,0 +1,31 @@
+Arguments: 
+  E:\Program Files\nodejs\node.exe C:\Users\HONOKA\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;E:\Program Files\nodejs\;E:\微信web开发者工具\dll;E:\Jav;\jdk-18.0.1.1\bin;D:\Git\cmd;C:\Users\HONOKA\AppData\Roaming\npm\node_modules\webpack;C:\Users\HONOKA\AppData\Local\Microsoft\WindowsApps;E:\Microsoft VS Code\bin;C:\Users\HONOKA\AppData\Roaming\npm;E:\QQGameTempest\Hall.57821\;E:\Java\jdk-18.0.1.1\bin;C:\Users\HONOKA\AppData\Roaming\npm\node_modules\webpack;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: E:\0honoka\npm\package.json: Unexpected token / in JSON at position 221
+      at JSON.parse (<anonymous>)
+      at C:\Users\HONOKA\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\HONOKA\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\HONOKA\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

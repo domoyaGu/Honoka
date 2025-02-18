@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.shop-cart.data-v-15a6e6e4 {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #fff;
+}
+.left.data-v-15a6e6e4 {
+  display: flex;
+  width: 70%;
+}
+.left .img.data-v-15a6e6e4 {
+  position: absolute;
+  top: -20px;
+}
+.left .img image.data-v-15a6e6e4 {
+  width: 40px;
+  height: 70px;
+}
+.left .text.data-v-15a6e6e4 {
+  margin-left: 60px;
+}
+.right.data-v-15a6e6e4 {
+  flex: 1;
+  text-align: center;
+  background-color: gray;
+}
+.paymentActive.data-v-15a6e6e4 {
+  background-color: #ffbe11;
+}
+

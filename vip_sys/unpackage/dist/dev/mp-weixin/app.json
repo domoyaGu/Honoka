@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/tabbar/index/index",
+    "pages/tabbar/mine/mine",
+    "pages/login/login",
+    "pages/orderlist/orderlist",
+    "pages/viplistpage/viplistpage",
+    "pages/detail/detail",
+    "pages/pagemanager/pagemanager"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "color": "#999999",
+    "selectedColor": "#ffaa7f",
+    "list": [
+      {
+        "iconPath": "static/share-d.png",
+        "selectedIconPath": "static/share-s.png",
+        "pagePath": "pages/tabbar/index/index",
+        "text": "推荐"
+      },
+      {
+        "iconPath": "static/mine-d.png",
+        "selectedIconPath": "static/mine-s.png",
+        "pagePath": "pages/tabbar/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "lazyCodeLoading": "requiredComponents",
+  "usingComponents": {}
+}

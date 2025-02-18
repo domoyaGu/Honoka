@@ -1,0 +1,24 @@
+<h2><span style="font-size: 16px;">概要</span></h2>
+<p><span style="font-size: 16px;">对于一个a标签，原生效果有点击直接当前页跳转路由，按键（windows为ctrl，ios为command）+ 点击打开路由的新页面这两种效果</span></p>
+<p><span style="font-size: 16px; color: #ff0000;">注意，第一种效果是a标签自带的，第二种效果是浏览器的行为。</span></p>
+<p><span style="font-size: 16px;">如图为普通a标签和部分属性，点击跳转新路由/newapi，当然同时也会触发newUrl函数</span></p>
+<p><span style="font-size: 16px;"><img src="https://img2023.cnblogs.com/blog/2001819/202310/2001819-20231011092932337-1781811292.png" alt="" loading="lazy" /></span></p>
+<p><span style="font-size: 16px;">&nbsp;现在需要阻止a标签原生的点击事件，实现点击触发函数，但当前页面不跳转路由，但是要保留按键+点击打开新页面的效果</span></p>
+<h2><span style="font-size: 16px;">实现</span></h2>
+<p><span style="font-size: 16px;">&nbsp;实现方式很简单，</span></p>
+<p><span style="font-size: 16px;">1. Vue有自带的.prevent机制，可以直接绑定到click上即可实现</span></p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202310/2001819-20231011093408623-1580785005.png" alt="" loading="lazy" /></p>
+<p><span style="font-size: 16px;">2. 用原生的js，获取dom，然后将其click事件直接preventDefault。（Vue中避免未渲染，放在nextTick里）</span></p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202310/2001819-20231011094517653-678151864.png" alt="" loading="lazy" /></p>
+<p>代码：</p>
+<div class="cnblogs_code">
+<pre> nextTick(() =&gt;<span style="color: #000000;"> {
+    let dom </span>= document.getElementById('apiA'<span style="color: #000000;">)
+    dom.onclick </span>= e =&gt;<span style="color: #000000;"> {
+      console.log(e);
+      
+      e.preventDefault();
+    }
+  })</span></pre>
+</div>
+<p>&nbsp;</p>

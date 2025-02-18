@@ -1,0 +1,74 @@
+{
+	"disease": [
+		{
+			"id": "1",
+			"name": "损伤昏厥病",
+			"code": "BGU070",
+			"sujectcategory": "骨伤科病",
+			"systemcategory": "损伤内证病类"
+		},
+		{
+			"id": "2",
+			"name": "伤后癃闭病",
+			"code": "BGU080",
+			"sujectcategory": "骨伤科病",
+			"systemcategory": "损伤内证病类"
+		},
+		{
+			"id": "3",
+			"name": "损伤痿软麻木病",
+			"code": "BGU090",
+			"sujectcategory": "骨伤科病",
+			"systemcategory": "损伤内证病类"
+		},
+		{
+			"id": "4",
+			"name": "损伤眩晕病",
+			"code": "BGU100",
+			"sujectcategory": "骨伤科病",
+			"systemcategory": "损伤内证病类"
+		},
+		{
+			"id": "5",
+			"name": "损伤喘咳病",
+			"code": "BGU110",
+			"sujectcategory": "骨伤科病",
+			"systemcategory": "损伤内证病类"
+		},
+		{
+			"id": "6",
+			"name": "创伤病",
+			"code": "BGC000",
+			"sujectcategory": "骨伤科病",
+			"systemcategory": "创伤病类"
+		},
+		{
+			"id": "7",
+			"name": "骨伤科瘤病",
+			"code": "BGL000",
+			"sujectcategory": "骨伤科病",
+			"systemcategory": "骨伤科瘤病类"
+		},
+		{
+			"id": "8",
+			"name": "梅核气病",
+			"code": "BRY070",
+			"sujectcategory": "耳鼻喉科病",
+			"systemcategory": "咽喉病类"
+		},
+		{
+			"id": "9",
+			"name": "异物梗喉病",
+			"code": "BRY080",
+			"sujectcategory": "耳鼻喉科病",
+			"systemcategory": "咽喉病类"
+		},
+		{
+			"id": "10",
+			"name": "牙痛病",
+			"code": "BRK010",
+			"sujectcategory": "耳鼻喉科病",
+			"systemcategory": "口齿病类"
+		}
+	]
+}

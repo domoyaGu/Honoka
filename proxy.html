@@ -1,0 +1,19 @@
+<script>
+    let obj = {
+        name: '12'
+    }
+    let objProxy = new Proxy(obj, {
+        get(obj, key) {
+            console.log("获取");
+        },
+        set(obj, key, newValue) {
+            console.log("设置");
+        },
+        deleteProperty(obj, key) {
+            console.log("删除");
+        },
+        has(obj, key) {
+            return key in obj
+        }
+    })
+</script>

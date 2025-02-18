@@ -1,0 +1,16 @@
+<div>今天有个需求，想做一个类似<a href="https://www.json.cn/" target="_blank">json.cn</a>的一个效果，将接口的数据自动转换成格式化好的json串并方便复制</div>
+<div>这边翻了一些网上的方式，找到个最简单的，就用input的textarea可以直接展示：&nbsp;</div>
+<div>
+<div class="cnblogs_code">
+<pre>&lt;el-input v-model="jsonText" :autosize="true" :min="1" :max="10000000" readonly type="textarea"/&gt;</pre>
+</div>
+<p>然后jsonText对应的处理为</p>
+<div class="cnblogs_code">
+<pre>jsonText.value = JSON.stringify(data, <span style="color: #0000ff;">null</span>, '\t')</pre>
+</div>
+</div>
+<div>这样即可实现如下效果（公司内部信息打个码）</div>
+<div>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202309/2001819-20230907134416802-1540526396.png" alt="" loading="lazy" /></p>
+<p>&nbsp;</p>
+</div>

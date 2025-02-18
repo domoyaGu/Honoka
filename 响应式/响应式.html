@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <a href="" class="logo"></a>
+    <ul>
+        <li><a href=""></a></li>
+    </ul> -->
+    <div id="app">
+        1：<span id="box-1"></span>
+        2：<span id="box-2"></span>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+         let obj = {};
+         dataHi({
+            data: obj,
+            tag: 'view-1',
+            datakey: 'one',
+            selector: '#box-1'
+         })
+         dataHi({
+            data: obj,
+            tag: 'view-2',
+            datakey: 'two',
+            selector: '#box-2'
+         })
+
+         // 初始化赋值
+         obj.one = "1111111"
+         obj.two = "22222222"
+
+         // 劫持，渲染
+
+    </script>
+</body>
+</html>

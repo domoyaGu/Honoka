@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- vue初始化会用到 patch(container, vnode)；更新会用到update(vnode, newVnode) -->
+    <script>
+        function createElemnet(vnode) {
+            let tag = vnode.tag; // 目标元素
+            let attrs = vnode.attrs || {}; // 属性
+            let children = vnode.children || [] // 子节点
+
+            if (!tag) {
+                return null;
+            }
+
+            let elem = document.createElement(tag)
+
+            for (let attrName in attrs) {
+                if (attrs.hasOwnProperty(attrName)) {
+                    // class
+                    elem.setAttribute(attrName, attrs[attrName])
+                }
+            }
+            // 子元素
+            children.forEach(function(childNode) {
+                elem.appendChild(createElemnet(childNode))
+            });
+        }
+
+        function updateChildren(vnode, newVnode) {
+            let children = vnode.children || []
+            let newChildren = newVnode.children || []
+            children.forEach(function(childrenVnode, index) {
+                // 循环每一项
+                let newChildrenVnode = newChildren[index]
+                // 第一层没变化
+                if (childrenVnode.tag = newChildrenVnode.tag) {
+                    updateChildren(childrenVnode, newChildrenVnode)
+                } else {
+                    // 第一层变化了()
+                    replaceNode(childrenVnode, newChildrenVnode)
+                }
+            })
+        }
+    </script>
+</body>
+</html>

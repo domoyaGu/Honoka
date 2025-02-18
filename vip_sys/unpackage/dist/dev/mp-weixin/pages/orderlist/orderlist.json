@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "消费记录",
+  "navigationBarBackgroundColor": "#ffaa00",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

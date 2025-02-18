@@ -1,0 +1,9 @@
+<script>
+    // 校验数据类型
+    function checkType (data) {
+        let type = Object.prototype.toString.call(data)
+        return type.substring(8, type.length - 1).toLowerCase()
+    }
+    let type = checkType("hello")
+    console.log(type)
+</script>

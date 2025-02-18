@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.food-info.data-v-50bf15d7 {
+  height: 180px;
+  padding: 10px 10px 15px 10px;
+  border-radius: 3.2vw 3.2vw 0 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+.food-info-title.data-v-50bf15d7 {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.food-info-content.data-v-50bf15d7 {
+  height: 180px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.food-info-content.data-v-50bf15d7::-webkit-scrollbar {
+  display: none;
+}
+.food-item.data-v-50bf15d7 {
+  display: flex;
+  padding: 10px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.food-item .left.data-v-50bf15d7 {
+  display: flex;
+  width: 70%;
+}
+.left image.data-v-50bf15d7 {
+  width: 50px;
+  height: 50px;
+}
+.left .text.data-v-50bf15d7 {
+  margin-left: 10px;
+}
+.left .text-upper.data-v-50bf15d7 {
+  font-size: 18px;
+}
+.left .text-center.data-v-50bf15d7 {
+  font-size: 12px;
+  color: #c1c1bb;
+}
+.left .text-center .discount.data-v-50bf15d7 {
+  margin-left: 5px;
+}
+.left .text-lower.data-v-50bf15d7 {
+  position: relative;
+  bottom: 0;
+  color: red;
+}
+.left .text-lower text.data-v-50bf15d7 {
+  font-size: 12px;
+}
+.food-item .right.data-v-50bf15d7 {
+  flex: 1;
+  position: relative;
+}
+.right .right-wrap.data-v-50bf15d7 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.right-wrap text.data-v-50bf15d7 {
+  display: inline-block;
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 22px;
+  border-radius: 5px;
+}
+.right-wrap .reduce.data-v-50bf15d7 {
+  border: 1px solid #f3a73f;
+}
+.right-wrap .count.data-v-50bf15d7 {
+  font-size: 18px;
+}
+.right-wrap .add.data-v-50bf15d7 {
+  background-color: #f3a73f;
+}
+

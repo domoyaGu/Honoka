@@ -1,0 +1,59 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.comment.data-v-51925555 {
+  height: 100vh;
+  padding: 10px;
+  background-color: #f6f6f6;
+}
+.header.data-v-51925555 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.content.data-v-51925555 {
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.shop-info.data-v-51925555 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.left.data-v-51925555 {
+  display: flex;
+  align-items: center;
+}
+.left image.data-v-51925555 {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.right text.data-v-51925555 {
+  color: #98989d;
+}
+.rate-info.data-v-51925555 {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.rate-info view.data-v-51925555 {
+  margin-right: 15px;
+}
+.rate-info text.data-v-51925555 {
+  font-size: 14px;
+  color: #98989d;
+}
+.evaluate-info.data-v-51925555 {
+  margin-bottom: 30px;
+}
+.other-info.data-v-51925555 {
+  display: flex;
+  justify-content: right;
+}
+.btn-delete.data-v-51925555 {
+  font-size: 14px;
+}
+

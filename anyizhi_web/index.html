@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="Keywords"
+      content="安全统筹,安全统筹管理系统,交通安全统筹,车辆统筹,机动车安全,安全统筹管理,出单系统,补偿系统"
+    />
+    <meta
+      name="description"
+      content="安易智安全统筹管理系统是安易智自主开发的一套针对营运车安全互助、统筹业务的管理系统，具备费率设置、统筹单管理、批单管理、单据打印、补偿管理、风控管理、统计分析等诸多与实际业务非常切合的功能。"
+    />
+
+    <title>
+      安易智-安全统筹管理系统,营运车安全统筹管理系统,交通安全统筹管理软件,机动车安全统筹管理软件
+    </title>
+    <link rel="icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./css/animate.css" />
+    <style type="text/css">
+      .lunbotu {
+        width: 100%;
+        height: 520px;
+        position: relative;
+        background: url("./img/lubotu4.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      .product-introduce {
+        position: relative;
+      }
+      .nav2 {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        height: 164px;
+        margin-top: -82px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 29px 13px rgba(51, 66, 96, 0.08);
+      }
+      .nav2-item {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        /* justify-content: space-around; */
+      }
+      .nav2-item h3 {
+        font-weight: 600;
+      }
+      .nav2-item > div {
+        height: 82px;
+      }
+
+      .pt-content > h3 {
+        font-size: 18px;
+        color: #2e2e2e;
+      }
+      .pt-content > p {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 228px;
+        color: #999999;
+        font-size: 14px;
+        margin-top: 16px;
+      }
+      .img-item {
+        width: 82px;
+        height: 82px;
+        margin-right: 10px;
+        text-align: center;
+        /* padding: 0 30px; */
+      }
+      .title {
+        width: 100%;
+        margin-top: 100px;
+      }
+      .title > h3 {
+        width: 100%;
+        text-align: center;
+        color: #1ea525;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .title > p {
+        width: 100%;
+        text-align: center;
+        color: #e2e6e8;
+      }
+      .product {
+        width: 90%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        margin: 50px auto;
+        flex-wrap: wrap;
+      }
+      .product p {
+        color: #444;
+      }
+      .product-item {
+        width: 26%;
+        max-width: 300px;
+        height: 360px;
+        box-shadow: 0px 0px 29px 13px rgba(51, 66, 96, 0.08);
+        border-radius: 10px;
+        cursor: pointer;
+        padding: 30px;
+        /* display: flex;
+flex-direction: column;
+justify-content: space-between; */
+      }
+      .product-item h2 {
+        font-size: 24px;
+        font-weight: 600;
+        height: 34px;
+        margin-top: 32px;
+        margin-bottom: 20px;
+      }
+
+      .product-item:hover {
+        box-shadow: 0px 4px 29px 13px rgba(51, 66, 96, 0.08),
+          inset 0px 0px 4px 3px #ffffff,
+          inset 0px 0px 128px 12px rgba(14, 134, 1, 0.1);
+      }
+      .programme {
+        width: 100%;
+        height: 356px;
+        position: relative;
+        background: url(./img/indexCase.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+      }
+      .programme-introduce {
+        width: 90%;
+        max-width: 1200px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .programme-introduce > h1 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1ea525;
+        margin-bottom: 20px;
+      }
+      .programme-introduce > p {
+        color: #fff;
+        max-width: 505px;
+        text-align: left;
+        margin: 0 auto;
+        letter-spacing: 5px;
+      }
+      .news-content {
+        margin: 50px auto;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 1200px;
+        height: 364px;
+      }
+
+      .news-content ul {
+        max-width: 500px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .news-content li {
+        display: flex;
+        width: 100%;
+        margin-top: 18px;
+        font-size: 14px;
+        border-bottom: 1px solid #f0f0f0;
+        /* justify-content: space-between; */
+        align-items: center;
+        text-align: left;
+        cursor: pointer;
+        z-index: 99;
+      }
+      .news-content li h4 {
+        text-align: left;
+        width: 100%;
+      }
+      .news-content li img {
+        font-size: 14px;
+        width: 14px;
+        height: 14px;
+      }
+      .news-content p {
+        color: #9e9e9e;
+        width: 150px;
+      }
+
+      @media (max-width: 1100px) {
+        .nav2 {
+          height: initial;
+        }
+        .nav2-item {
+          display: block;
+          text-align: center;
+          padding: 20px;
+          height: 250px;
+        }
+        .img-item {
+          margin: 0 auto;
+        }
+        .pt-content {
+          width: 100%;
+        }
+        .product-item {
+          width: 20%;
+          height: 430px;
+        }
+      }
+      @media (max-width: 880px) {
+        body {
+          font-size: 12px;
+        }
+        .nav {
+          display: block;
+        }
+        .nav-title {
+          width: 100%;
+          justify-content: center;
+          align-items: center;
+        }
+        .nav > .menu {
+          display: none;
+        }
+        .nav {
+          height: auto;
+        }
+        .active {
+          border: 0;
+        }
+        .active > a {
+          font-size: 16px;
+        }
+        .menu2 {
+          padding: 20px;
+          display: flex;
+          /* justify-content: center; */
+          flex-wrap: wrap;
+        }
+        .menu2 > li {
+          width: 25%;
+          text-align: center;
+          min-width: 90px;
+        }
+        .lunbo-font {
+          font-size: 14px;
+        }
+        /* .product{
+display: block;
+} */
+        .product-item {
+          width: 90%;
+          margin: 10px auto;
+        }
+        .news-content {
+          display: block;
+          height: auto;
+        }
+        .news-content ul {
+          margin: 10px auto;
+          width: 100%;
+        }
+        .news-content li {
+          justify-content: space-between;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <a
+        href="./index.html"
+        style="display: inline-block; cursor: pointer; z-index: 100"
+      >
+        <div class="nav-title">
+          <img style="width: 24px; height: 24px" src="./img/logo.svg" />安易智
+        </div>
+      </a>
+
+      <div class="menu">
+        <ul>
+          <li class="active"><a href="./index.html">首页</a></li>
+          <li><a href="./underwritingSystem.html">承统系统</a></li>
+          <li><a href="./claimsSystem.html">补偿系统</a></li>
+          <li><a href="./mobileoperatingSystem.html">移动作业</a></li>
+          <li><a href="./NewsCenter.html">新闻中心</a></li>
+          <li><a href="./aboutUs.htm">关于我们</a></li>
+        </ul>
+      </div>
+      <ul class="menu2">
+        <li class="active"><a href="./index.html">首页</a></li>
+        <li><a href="./underwritingSystem.html">承统系统</a></li>
+        <li><a href="./claimsSystem.html">补偿系统</a></li>
+        <li><a href="./mobileoperatingSystem.html">移动作业</a></li>
+        <li><a href="./NewsCenter.html">新闻中心</a></li>
+        <li><a href="./aboutUs.htm">关于我们</a></li>
+      </ul>
+    </div>
+    <div class="big-logo">
+      <img src="./img/logo.svg" style="margin-left: 10px" />安易智
+    </div>
+    <div class="lunbotu">
+      <div class="introduce">
+        <div class="lunbo-font">
+          <div class="circular"></div>
+          <p>
+            交通安全行业信息化专业开发商，坚持做行业性风险管控合理的产品软件
+          </p>
+        </div>
+        <div class="lunbo-font">
+          <div class="circular"></div>
+          <p>信守承诺，最佳服务，追求卓越</p>
+        </div>
+      </div>
+    </div>
+    <div class="product-introduce">
+      <div class="nav2 wow fadeInRight">
+        <div class="nav2-item">
+          <div class="img-item"><img src="./img/pt1.svg" /></div>
+          <div class="pt-content">
+            <h3>平台优势</h3>
+            <p>降低平台运营成本，提升作业人员运转效率。</p>
+          </div>
+        </div>
+        <div class="nav2-item">
+          <div class="img-item"><img src="./img/pt2.svg" /></div>
+          <div class="pt-content">
+            <h3>平台服务</h3>
+            <p>
+              为机动车安全服务企业提供从核心系统到前端服务的全链条线上化能力。
+            </p>
+          </div>
+        </div>
+        <div class="nav2-item">
+          <div class="img-item"><img src="./img/pt3.svg" /></div>
+          <div class="pt-content">
+            <h3>员工服务</h3>
+            <p>为代理人、业务员拓展提供移动展业工具,建立TOB企业级开发平台。</p>
+          </div>
+        </div>
+      </div>
+      <div class="title">
+        <h3>
+          <img src="./img/titleLeft.svg" style="margin-right: 8px" />产品介绍
+          <img src="./img/titleRight.svg" />
+        </h3>
+        <p>Product Introduce</p>
+      </div>
+      <div class="product">
+        <div class="wow fadeInRight product-item">
+          <div style="padding: 0 30px">
+            <img src="./img/item1.png" style="width: 100%; height: 180px" />
+          </div>
+          <div>
+            <h2>承统系统</h2>
+            <p>
+              提供从报价、出单、审核、支付、批改、数据管理、系统配置等全链条功能。
+              支持差异化配置，灵活机动满足各场景需求。
+            </p>
+          </div>
+        </div>
+        <div class="wow fadeInRight product-item">
+          <div style="padding: 0 30px">
+            <img src="./img/item2.png" style="width: 100%; height: 180px" />
+          </div>
+          <div>
+            <h2>补偿系统</h2>
+            <p>
+              补偿系统实现了车辆事故的车、物、人伤整个补偿流程，事故案件可分拆为多个任务，每个任务可单独执行补偿流程，全部任务结束后，案件自动结案。
+            </p>
+          </div>
+        </div>
+        <div class="wow fadeInRight product-item">
+          <div style="padding: 0 30px">
+            <img src="./img/item3.png" style="width: 100%; height: 180px" />
+          </div>
+          <div>
+            <h2>移动作业</h2>
+            <p>
+              通过客户端或作业端小程序方式为开展统筹业务，主要提供统筹单、验车码的查询，事故查勘任务下发、接收、资料上传等功能。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="programme">
+      <div class="programme-introduce">
+        <h1>安易智服务方案</h1>
+        <p>
+          机动车安全服务行业正在逐步进入数字化时代，安易智服务方案聚焦用户根本，
+          旨在帮助统筹公司快速开展相关业务、抢占市场先机，覆盖行业经营中心的产
+          品设计、精准营销、核统核赔、服务于运营管理等关键环节，帮助统筹公司最
+          大限度降本增效，推动新时代下从场景向生态的演变。
+        </p>
+      </div>
+    </div>
+    <div class="news">
+      <div class="title">
+        <h3>
+          <img src="./img/titleLeft.svg" style="margin-right: 8px" />新闻资讯
+          <img src="./img/titleRight.svg" />
+        </h3>
+        <p>News center</p>
+      </div>
+      <div class="news-content">
+        <div style="text-align: center">
+          <img src="./img/news.svg" style="width: 90%; height: 100%" />
+        </div>
+        <div>
+          <ul class="wow fadeInRight" id="fadeInRight">
+            <li>
+              <p>2021-10-17</p>
+              <h4>交通安全统筹存在是否是必要的？</h4>
+              <img src="./img/11.svg" />
+            </li>
+            <li>
+              <p>2021-09-17</p>
+              <h4>商业保险与车辆统筹是否有共舞可行性</h4>
+              <img src="./img/11.svg" />
+            </li>
+            <li>
+              <p>2021-08-17</p>
+              <h4>统筹车险与其他车险的区别有什么？</h4>
+              <img src="./img/11.svg" />
+            </li>
+            <li>
+              <p>2021-07-16</p>
+              <h4>车辆统筹如何降低保险成本？</h4>
+              <img src="./img/11.svg" />
+            </li>
+            <li>
+              <p>2021-06-29</p>
+              <h4>车辆统筹是什么？</h4>
+              <img src="./img/11.svg" />
+            </li>
+            <li>
+              <p>2021-05-28</p>
+              <h4>交通安全统筹工作是否合规？</h4>
+              <img src="./img/11.svg" />
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="boottom">
+      <div
+        style="
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+        "
+      >
+        <div class="boottom-content">
+          <div>
+            <h3>产品中心</h3>
+            <p><a href="./underwritingSystem.html">承统系统</a></p>
+            <p><a href="./claimsSystem.html">补偿系统</a></p>
+            <p><a href="./mobileoperatingSystem.html">移动作业</a></p>
+          </div>
+          <div>
+            <h3>新闻中心</h3>
+            <p><a href="./NewsCenter.html">新闻公司</a></p>
+            <p><a href="./NewsCenter.html">行业新闻</a></p>
+          </div>
+          <div>
+            <h3>关于我们</h3>
+            <p><a href="./aboutUs.htm">团队介绍</a></p>
+          </div>
+          <div>
+            <h3>联系我们</h3>
+            <p>官方邮箱：anyizhi888@foxmail.com</p>
+            <p>QQ：1624924890</p>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          width: 90%;
+          max-width: 1200px;
+          height: 1px;
+          background-color: #4d4d4d;
+          margin: 0 auto;
+          margin-bottom: 38px;
+        "
+      ></div>
+      <div style="color: #9e9e9e; text-align: center; width: 100%">
+        安易智@2018~2023版权所有
+      </div>
+    </div>
+    <script src="./js/wow.min.js"></script>
+    <script>
+      // new WOW().init();
+      var wow = new WOW({
+        boxClass: "wow",
+        animateClass: "animated",
+        offset: 0,
+        mobile: true,
+        live: true,
+      });
+      wow.init();
+      // 点击文章
+      var fadeInRight = document.getElementById("fadeInRight");
+      console.log(fadeInRight.children);
+      for (var i = 0; i < fadeInRight.children.length; i++) {
+        console.log("fadeInRight[i].index", fadeInRight.children[i], i);
+        fadeInRight.children[i].index = i;
+        fadeInRight.children[i].addEventListener("click", function () {
+          console.log(this.index);
+          sessionStorage.setItem("NewsCenterKey", this.index + 11);
+          window.location = "./NewsDetail.html";
+        });
+      }
+    </script>
+  </body>
+</html>

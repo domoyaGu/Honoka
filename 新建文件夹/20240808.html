@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function openNew() {
+      alert('这个函数在新窗口中被调用了！');
+    }
+    
+    // 打开新窗口并调用函数
+    function openAndCall() {
+      // 打开新窗口
+      let newWindow = window.open('https://www.bilibili.com', 'test');
+      // 如果新窗口打开成功
+      if(newWindow) {
+        console.log(newWindow)
+        // 设置新窗口的焦点事件监听器
+        newWindow.onfocus = function() {
+            console.log(newWindow.document)
+        };
+        let str = "<script>openNew();" + '<' + '/script>'
+        // newWindow.document.write(str);
+      } else {
+        alert('窗口打开失败！');
+      }
+    }
+    
+    // 调用函数打开新窗口
+    // openNewWindowAndCallFunction();
+  </script>
+  <button onclick="openAndCall()">test</button>
+</body>
+</html>

@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.order-detail.data-v-19fec3cc {
+  height: 100vh;
+  padding: 10px;
+  background-color: #e5e5e5;
+}
+.header text.data-v-19fec3cc {
+  font-size: 22px;
+  font-weight: 700;
+}
+.food-info.data-v-19fec3cc {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.shop-name.data-v-19fec3cc {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f2ecec;
+}
+.shop-name text.data-v-19fec3cc:last-child {
+  padding: 3px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+}
+.food-item-list.data-v-19fec3cc {
+  width: 100%;
+}
+.food-item.data-v-19fec3cc {
+  display: flex;
+  padding: 10px;
+}
+.item-left.data-v-19fec3cc {
+  margin-right: 10px;
+}
+.item-left image.data-v-19fec3cc {
+  width: 50px;
+  height: 50px;
+  border-radius: 7px;
+}
+.item-right.data-v-19fec3cc {
+  flex: 1;
+  position: relative;
+}
+.item-right-upper.data-v-19fec3cc {
+  display: flex;
+  justify-content: space-between;
+}
+.item-right-upper text.data-v-19fec3cc:first-child {
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item-right-lower.data-v-19fec3cc {
+  position: absolute;
+  bottom: 0;
+  font-size: 14px;
+  color: #ccc;
+}
+.food-total-price.data-v-19fec3cc {
+  padding: 10px;
+}
+.food-total-price-upper.data-v-19fec3cc {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.food-total-price-lower.data-v-19fec3cc {
+  display: flex;
+  justify-content: right;
+}
+

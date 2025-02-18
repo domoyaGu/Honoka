@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  function printPDF() {
+    var ACTIVEREPORTSJS = GC.ActiveReports.Core;
+    var PDF = GC.ActiveReports.PdfExport;
+
+    var settings = {
+      info: {
+        title: "test",
+        author: "GrapeCity inc.",
+      },
+      pdfVersion: "1.7",
+    };
+
+    var pageReport = new ACTIVEREPORTSJS.PageReport();
+    pageReport
+      .load("1.rdlx-json")
+      .then(function () {
+        return pageReport.run();
+      })
+      .then(function (pageDocument) {
+        return PDF.exportDocument(pageDocument, settings);
+      })
+      .then(function (result) {
+        let formData = new FormData();
+        formData.append("file", result.data);
+        debugger
+        // fetch("http://localhost:8088/print", {
+        //     method: 'POST',
+        //     mode: 'cors',
+        //     body: formData
+        // })
+      });
+  }
+  setTimeout(() => {
+    printPDF()
+  }, 1000);
+</script>
+<body>
+  <div>
+    测试pdf222
+  </div>
+  <a href="www.baidu.com">我是百度</a>
+</body>
+</html>

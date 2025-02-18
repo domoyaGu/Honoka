@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "东东发艺会员",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#ffaa00",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

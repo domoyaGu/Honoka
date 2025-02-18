@@ -1,0 +1,105 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/tabbar/index/index",
+			"style": {
+				"navigationBarTitleText": "东东发艺会员",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#ffaa00",
+				"enablePullDownRefresh": true
+			}
+		}
+	    ,{
+	        "path" : "pages/tabbar/mine/mine",
+	        "style" :                                                                                    
+	        {
+	            "navigationBarTitleText": "会员中心",
+	    		"navigationBarBackgroundColor": "#ffaa00",
+	    		"navigationBarTextStyle": "white",
+	            "enablePullDownRefresh": true
+	        }
+	        
+	    }
+        ,{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登录注册",
+                "navigationBarBackgroundColor": "#ffaa00",
+                "navigationBarTextStyle": "white",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/orderlist/orderlist",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "消费记录",
+                "navigationBarBackgroundColor": "#ffaa00",
+                "navigationBarTextStyle": "white",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/viplistpage/viplistpage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "会员列表",
+                "navigationBarBackgroundColor": "#ffaa00",
+                "navigationBarTextStyle": "white",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/detail/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "navigationBarBackgroundColor": "#ffaa00",
+                "navigationBarTextStyle": "white",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/pagemanager/pagemanager",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "首页展示管理",
+                "navigationBarBackgroundColor": "#ffaa00",
+                "navigationBarTextStyle": "white",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+    ],
+	"tabBar": {
+		"backgroundColor":"#FFFFFF",
+		"color":"#999999",
+		"selectedColor":"#ffaa7f",
+		"list":[
+			{
+				"iconPath":"static/share-d.png",
+				"selectedIconPath":"static/share-s.png",
+				"pagePath":"pages/tabbar/index/index",
+				"text":"推荐"
+			},
+			{
+				"iconPath":"static/mine-d.png",
+				"selectedIconPath":"static/mine-s.png",
+				"pagePath":"pages/tabbar/mine/mine",
+				"text":"我的"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

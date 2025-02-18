@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.comment.data-v-428b4ff8 {
+  height: 100vh;
+  padding: 10px;
+  background-color: #f6f6f6;
+}
+.header.data-v-428b4ff8 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.content.data-v-428b4ff8 {
+  padding: 15px 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.shop-info.data-v-428b4ff8 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shop-info-left.data-v-428b4ff8 {
+  display: flex;
+  align-items: center;
+}
+.shop-info-left image.data-v-428b4ff8 {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+.shop-info-right text.data-v-428b4ff8 {
+  color: #98989d;
+}
+.rate-info.data-v-428b4ff8 {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.rate-info view.data-v-428b4ff8 {
+  margin-right: 15px;
+}
+.rate-info text.data-v-428b4ff8 {
+  font-size: 14px;
+  color: #98989d;
+}
+.other-info.data-v-428b4ff8 {
+  display: flex;
+}
+.food-info.data-v-428b4ff8 {
+  margin-top: 15px;
+}
+.food-info .left.data-v-428b4ff8 {
+  display: flex;
+  align-items: center;
+}
+.left image.data-v-428b4ff8 {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.left text.data-v-428b4ff8 {
+  display: inline-block;
+  padding: 5px;
+  font-size: 14px;
+  background-color: #f6f6f6;
+}
+.reply.data-v-428b4ff8 {
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+  background-color: #f6f6f6;
+}
+.left-text.data-v-428b4ff8 {
+  color: #ffa04e;
+}
+

@@ -1,0 +1,75 @@
+<p><span style="font-size: 14pt;"><strong><span style="background-color: #ffffff; color: #000000;">描述：</span></strong></span></p>
+<p><span style="background-color: #ffffff; color: #000000;">因为个人很喜欢flex布局，所以在做某个项目html框架的时候，会有如下这种情况出现</span></p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202309/2001819-20230918171105221-873301655.png" alt="" loading="lazy" /></p>
+<p>&nbsp;一个很简单的布局，大的盒子下包含了两个子盒子，第一个子盒子的高度固定，现在要让第二个盒子自适应撑满父布局剩下的高度，自然用css很简单实现</p>
+<p>设定一个flex，然后grow为1就行</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">.container1 {
+  width: 500px;
+  height: 800px;
+  display: flex;
+  flex</span>-<span style="color: #000000;">direction: column;
+  border: 1px solid black;
+}
+.child1 {
+  width: </span><span style="color: #800080;">100</span>%<span style="color: #000000;">;
+  background</span>-<span style="color: #000000;">color: grey;
+}
+.child2 {
+  width: </span><span style="color: #800080;">100</span>%<span style="color: #000000;">;
+  flex</span>-grow: <span style="color: #800080;">1</span><span style="color: #000000;">;
+  background</span>-<span style="color: #000000;">color: #f3f3f3;
+}</span></pre>
+</div>
+<p>效果如下：</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202309/2001819-20230918171319710-993866846.png" alt="" width="360" height="532" loading="lazy" /></p>
+<p>&nbsp;现在，要在child2中进行滚动处理，很容易想到加个overflow就行，但是滚动内容超过了父布局，就会将child1挤压，如：</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202309/2001819-20230918171645305-1248435528.png" alt="" loading="lazy" /></p>
+<p>&nbsp;效果会有问题：</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202309/2001819-20230918171745391-71444225.png" alt="" width="1006" height="594" loading="lazy" /></p>
+<p><strong><span style="font-size: 14pt;">解决方案：</span></strong></p>
+<p><span style="font-size: 14px;">用position相对定位定位好child2，再在child2中绝对定位滚动的盒子，就能实现需要的效果（为了查看效果copy了一个渐变的背景）：</span></p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202309/2001819-20230918172319685-1235459026.png" alt="" loading="lazy" /></p>
+<p>&nbsp;效果：</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202309/2001819-20230918172414398-688917469.png" alt="" width="905" height="535" loading="lazy" /></p>
+<p>&nbsp;</p>
+<p>代码：</p>
+<div class="cnblogs_code">
+<pre>&lt;body&gt;
+  &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">container1</span><span style="color: #800000;">"</span>&gt;
+    &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">child1</span><span style="color: #800000;">"</span> style=<span style="color: #800000;">"</span><span style="color: #800000;">height: 200px;</span><span style="color: #800000;">"</span>&gt;&lt;/div&gt;
+    &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">child2</span><span style="color: #800000;">"</span>&gt;
+      &lt;div <span style="color: #0000ff;">class</span>=<span style="color: #800000;">"</span><span style="color: #800000;">scroll_content</span><span style="color: #800000;">"</span>&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;style&gt;<span style="color: #000000;">
+.container1 {
+  width: 500px;
+  height: 800px;
+  display: flex;
+  flex</span>-<span style="color: #000000;">direction: column;
+  border: 1px solid black;
+}
+.child1 {
+  width: </span><span style="color: #800080;">100</span>%<span style="color: #000000;">;
+  background</span>-<span style="color: #000000;">color: grey;
+}
+.child2 {
+  width: </span><span style="color: #800080;">100</span>%<span style="color: #000000;">;
+  flex</span>-grow: <span style="color: #800080;">1</span><span style="color: #000000;">;
+  background</span>-<span style="color: #000000;">color: #f3f3f3;
+  overflow: auto;
+  position: relative;
+}
+.scroll_content {
+  position: absolute;
+  height: 1000px;
+  width: </span><span style="color: #800080;">100</span>%<span style="color: #000000;">;
+  background</span>-image: linear-gradient(to top, #a18cd1 <span style="color: #800080;">0</span>%, #fbc2eb <span style="color: #800080;">100</span>%<span style="color: #000000;">);
+}
+</span>&lt;/style&gt;</pre>
+</div>
+<p>&nbsp;</p>
+<p><span style="background-color: #ff0000; color: #ffffff;">注意事项：</span></p>
+<p><span style="font-size: 16px;"><strong><span style="background-color: #ffffff;">absolute过后慎用父组件的padding和margin效果，因为当前元素已脱离流，尽量在自身基础上进行盒子设置，必要时scroll_content下再建个盒子装滚动内容</span></strong></span></p>

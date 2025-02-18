@@ -1,0 +1,202 @@
+[
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000323",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市潮安区龙湖镇镇上",
+    "reportRemark": "标的车刮擦杂物，标的车（右）侧受损，三者杂物无损，无人伤，无其他损失，己提醒报交警，车在现场，己提醒保护现场。",
+    "insuredName": "陈林杰",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤UYV622",
+    "insuredCarVin": "LVSHCFAL0HE202943",
+    "driverNameMain": "陈林杰",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  },
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000320",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市湘桥区白塔村白塔村",
+    "reportRemark": "标的车撞停放三者车（粤ULJ795），标的车（右前）侧位受损，三者车受损，无人伤，无其他损失，己提醒报交警，车在现场，己提醒保护现场。未保车损险",
+    "insuredName": "江少武",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤ULH224",
+    "insuredCarVin": "LFMARE0C670033402",
+    "driverNameMain": "池希勉",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  },
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000316",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市湘桥区前进村前进村",
+    "reportRemark": "标的车撞柱子，标的车（右）侧受损，三者柱子无损，无人伤，无其他损失，己提醒报交警",
+    "insuredName": "管维国",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤UGP720",
+    "insuredCarVin": "12345678912345678X",
+    "driverNameMain": "管维国",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  },
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000315",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市湘桥区意溪镇意溪镇",
+    "reportRemark": "标的车撞花坛，标的车（右）侧受损，三者无损，无人伤，无其他损失，己提醒报交警，车在现场，己提醒保护现场。",
+    "insuredName": "刘如杰",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤DPP180",
+    "insuredCarVin": "LVSFCAAE5EF899950",
+    "driverNameMain": "刘如杰",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  },
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000311",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市潮安区浮洋镇乌洋市场对面西南方向130米乌洋市场",
+    "reportRemark": "标的车撞停放三者车（粤UXG750），标的车右后方受损，三者车受损，无人伤，无其他损失，己提醒报交警，车在现场，己提醒保护现场。",
+    "insuredName": "洪洽文",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤US9817",
+    "insuredCarVin": "LGBM4DE41HD102929",
+    "driverNameMain": "洪淋淋",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  },
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000310",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市湘桥区城桥村城桥村",
+    "reportRemark": "标的车撞杂物，标的车（右后）侧受损，三者杂物无损，无人伤，无其他损失，己提醒报交警，车在现场，己提醒保护现场。",
+    "insuredName": "宋世启",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤EER615",
+    "insuredCarVin": "LSGKE52H9HW280847",
+    "driverNameMain": "宋世启",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  },
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000294",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市湘桥区春晖路春晖路",
+    "reportRemark": "标的车撞杂物，标的车（右）侧受损，三者杂物无损，无人伤，无其他损失，己提醒报交警，复堪现场，己提醒定损前不要修车。",
+    "insuredName": "李秋贤",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤UNV517",
+    "insuredCarVin": "LFMK440F2G3221081",
+    "driverNameMain": "李秋贤",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  },
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000290",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市湘桥区潮州大道潮州大道",
+    "reportRemark": "标的车撞花圃，标的车（左）侧受损，三者花圃无损，无人伤，无其他损失，己提醒报交警，车在现场，己提醒保护现场。",
+    "insuredName": "苏镇荣",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤UZR029",
+    "insuredCarVin": "LHGG12672D2001095",
+    "driverNameMain": "苏镇荣",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  },
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000275",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市湘桥区桥东街道桥东街道",
+    "reportRemark": "标的车撞杂物，标的车（左后）侧受损，三者墙无损，无人伤，无其他损失，己提醒报交警，车在现场，己提醒保护现场。",
+    "insuredName": "尤小旺",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤UYW789",
+    "insuredCarVin": "LFMAP22C590119921",
+    "driverNameMain": "尤小旺",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  },
+  {
+    "ccId": "403701872",
+    "ccSize": "1861",
+    "claimId": "7445103652021000266",
+    "reportPhone": null,
+    "accidentPlace": "广东省潮州市湘桥区城新村城新村",
+    "reportRemark": "标的车撞墙角，标的车（右部）侧受损，三者墙无损，无人伤，无其他损失，己提醒报交警，车在现场，己提醒保护现场。",
+    "insuredName": "孙松浩",
+    "insuredId": "12345678912345678X",
+    "insuredCarPlateNo": "粤UC0400",
+    "insuredCarVin": "LZWADAGA7B8070805",
+    "driverNameMain": "孙松浩",
+    "driverIdMain": "12345678912345678X",
+    "plateNoThird": [
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"},
+      {"plateNoThird": "沪AZ3456", "driverIdThird": "438904198802034567", "vinThird": "LVSHCFAL0HE202943"}
+    ]
+  }
+]

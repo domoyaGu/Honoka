@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>安易智-联系我们</title>
+    <link rel="icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <style type="text/css">
+      .lunbotu {
+        width: 100%;
+        height: 470px;
+        background-image: url(./img/lianxi.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: relative;
+      }
+      .content {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        max-width: 1200px;
+      }
+      .title {
+        width: 100%;
+        margin: 100px 0;
+      }
+      .title > h3 {
+        width: 100%;
+        text-align: center;
+        color: #1ea525;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      .title > p {
+        width: 100%;
+        text-align: center;
+        color: #e2e6e8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <a
+        href="./index.html"
+        style="display: inline-block; cursor: pointer; z-index: 100"
+      >
+        <div class="nav-title">
+          <img style="width: 24px; height: 24px" src="./img/logo.svg" />安易智
+        </div>
+      </a>
+      <div class="menu">
+        <ul>
+          <li><a href="./index.html">首页</a></li>
+          <li><a href="./underwritingSystem.html">承统系统</a></li>
+          <li><a href="./claimsSystem.html">补偿系统</a></li>
+          <li><a href="./mobileoperatingSystem.html">移动作业</a></li>
+          <li><a href="./NewsCenter.html">新闻中心</a></li>
+          <li><a href="./aboutUs.htm">关于我们</a></li>
+          <li class="active"><a href="./contactUs.html">联系我们</a></li>
+        </ul>
+      </div>
+      <ul class="menu2">
+        <li><a href="./index.html">首页</a></li>
+        <li><a href="./underwritingSystem.html">承统系统</a></li>
+        <li><a href="./claimsSystem.html">补偿系统</a></li>
+        <li><a href="./mobileoperatingSystem.html">移动作业</a></li>
+        <li><a href="./NewsCenter.html">新闻中心</a></li>
+        <li><a href="./aboutUs.htm">关于我们</a></li>
+        <li class="active"><a href="./contactUs.html">联系我们</a></li>
+      </ul>
+    </div>
+    <div class="lunbotu"></div>
+    <div class="content">
+      <div class="title">
+        <h3>
+          <img src="./img/titleLeft.svg" style="margin-right: 8px" />联系我们
+          <img src="./img/titleRight.svg" />
+        </h3>
+        <p>Contact us</p>
+      </div>
+      <div>
+        <p style="font-weight: 600">
+          办公地址：上海市长宁区长宁路1033号联通大厦906室
+        </p>
+        <p style="font-weight: 600; margin-top: 16px">联系电话：13429201039</p>
+        <div
+          style="
+            margin-top: 50px;
+            width: 100%;
+            height: 550px;
+            border: #ccc solid 1px;
+            font-size: 12px;
+          "
+          id="map"
+        ></div>
+      </div>
+      <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap() {
+          createMap(); //创建地图
+          setMapEvent(); //设置地图事件
+          addMapControl(); //向地图添加控件
+          addMapOverlay(); //向地图添加覆盖物
+        }
+        function createMap() {
+          map = new BMap.Map("map");
+          map.centerAndZoom(new BMap.Point(121.423459, 31.224361), 18);
+        }
+        function setMapEvent() {
+          map.enableScrollWheelZoom();
+          map.enableKeyboard();
+          map.enableDragging();
+          map.enableDoubleClickZoom();
+        }
+        function addClickHandler(target, window) {
+          target.addEventListener("click", function () {
+            target.openInfoWindow(window);
+          });
+        }
+        function addMapOverlay() {
+          var markers = [
+            {
+              content: "联通大厦906室",
+              title: "上海市长宁区长宁路1033号联通大厦906室",
+              imageOffset: { width: -46, height: -21 },
+              position: { lat: 31.223937, lng: 121.423459 },
+            },
+          ];
+          for (var index = 0; index < markers.length; index++) {
+            var point = new BMap.Point(
+              markers[index].position.lng,
+              markers[index].position.lat
+            );
+            var marker = new BMap.Marker(point, {
+              icon: new BMap.Icon(
+                "http://api.map.baidu.com/lbsapi/createmap/images/icon.png",
+                new BMap.Size(20, 25),
+                {
+                  imageOffset: new BMap.Size(
+                    markers[index].imageOffset.width,
+                    markers[index].imageOffset.height
+                  ),
+                }
+              ),
+            });
+            var label = new BMap.Label(markers[index].title, {
+              offset: new BMap.Size(25, 5),
+            });
+            var opts = {
+              width: 200,
+              title: markers[index].title,
+              enableMessage: false,
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+            marker.setLabel(label);
+            addClickHandler(marker, infoWindow);
+            map.addOverlay(marker);
+          }
+        }
+        //向地图添加控件
+        function addMapControl() {
+          var scaleControl = new BMap.ScaleControl({
+            anchor: BMAP_ANCHOR_BOTTOM_LEFT,
+          });
+          scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+          map.addControl(scaleControl);
+          var navControl = new BMap.NavigationControl({
+            anchor: BMAP_ANCHOR_TOP_LEFT,
+            type: BMAP_NAVIGATION_CONTROL_LARGE,
+          });
+          map.addControl(navControl);
+          var overviewControl = new BMap.OverviewMapControl({
+            anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+            isOpen: true,
+          });
+          map.addControl(overviewControl);
+        }
+        var map;
+        initMap();
+      </script>
+    </div>
+    <div class="boottom">
+      <div
+        style="
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+        "
+      >
+        <div class="boottom-content">
+          <div>
+            <h3>产品中心</h3>
+            <p><a href="./underwritingSystem.html">承统系统</a></p>
+            <p><a href="./claimsSystem.html">补偿系统</a></p>
+            <p><a href="./mobileoperatingSystem.html">移动作业</a></p>
+          </div>
+          <div>
+            <h3>新闻中心</h3>
+            <p><a href="./NewsCenter.html">新闻公司</a></p>
+            <p><a href="./NewsCenter.html">行业新闻</a></p>
+          </div>
+          <div>
+            <h3>关于我们</h3>
+            <p><a href="./aboutUs.htm">团队介绍</a></p>
+          </div>
+          <div>
+            <h3>联系我们</h3>
+            <p>官方邮箱：anyizhi888@foxmail.com</p>
+            <p>QQ：1624924890</p>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          width: 90%;
+          max-width: 1200px;
+          height: 1px;
+          background-color: #4d4d4d;
+          margin: 0 auto;
+          margin-bottom: 38px;
+        "
+      ></div>
+      <div style="color: #9e9e9e; text-align: center; width: 100%">
+        安易智@2018~2023版权所有
+      </div>
+    </div>
+  </body>
+</html>

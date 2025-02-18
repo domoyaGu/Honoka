@@ -1,0 +1,62 @@
+/* 全局设置 */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 整体容器水平居中 */
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+/* 迷宫 */
+#maze {
+    display: block;
+    margin: 50px 0;
+    border: 2px black solid;
+    padding: 0;
+}
+
+.cell {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px black solid;
+    box-sizing: border-box;
+}
+
+.childCell {
+    font-size: 24px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+
+.speedCell {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: orange;
+}
+
+.catCell {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    transition: 1s;
+}
+
+.whiteCell {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blackCell {
+    background-color: black;
+}

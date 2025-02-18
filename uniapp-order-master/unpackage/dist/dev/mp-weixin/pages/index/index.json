@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "外卖猫",
+  "usingComponents": {
+    "navbar": "/components/navbar/navbar",
+    "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "shop-classify": "/pages/index/web/shopClassify",
+    "shop-list": "/pages/index/web/shopList"
+  }
+}

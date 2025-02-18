@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>安易智-新闻中心</title>
+    <link rel="icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <style type="text/css">
+      .lunbotu {
+        width: 100%;
+        height: 480px;
+        background: url(./img/newsHeads.jpg);
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      .middle {
+        margin-top: 30px;
+        display: flex;
+      }
+      .nav2 {
+        width: 200px;
+      }
+      .title-h1 {
+        font-size: 18px;
+        font-weight: 600;
+        border-bottom: 1px solid #f0f0f0;
+        height: 36px;
+      }
+      .news-content {
+        width: 90%;
+        max-width: 1200px;
+        margin: 24px auto;
+        min-height: 300px;
+      }
+      .news-content h3 {
+        width: 90%;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .title-hy {
+        color: #999999;
+      }
+      .content {
+        width: 100%;
+        margin-left: 8%;
+      }
+      .industry-0,
+      .industry-1,
+      .industry-2,
+      .industry-3 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* display: none; */
+      }
+      .industry-item {
+        font-size: 14px;
+        color: #666666;
+        width: 48%;
+        height: 530px;
+        background-color: #fff;
+        border-radius: 10px;
+        /* border: 1px solid #cccccc; */
+        outline: solid 1px #dcdfe6;
+        margin-top: 32px;
+      }
+      .industry-item:nth-child(2),
+      .industry-item:nth-child(1) {
+        margin-top: 0;
+      }
+      .article-img {
+        width: 100%;
+        height: 360px;
+        border-radius: 10px;
+        border-radius: 10px 10px 0 0;
+        /* border: 1px solid #ccc; */
+        overflow: hidden;
+        font-size: 0 !important;
+      }
+      .article-img > img {
+        /* width: calc(100% - 1px); */
+        height: 100%;
+        width: 100%;
+        /* border-radius: 10px 10px 2 2; */
+        border: none;
+        display: block;
+        border: "0";
+      }
+      .article-font {
+        padding: 24px;
+
+        border-radius: 0 0 10px 10px;
+        border-top: 0;
+      }
+      .article-title {
+        color: #2e2e2e;
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 0 !important;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /*  超出多少行 */
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+      .article-font > span {
+        color: #aaa;
+      }
+      .industry-item p {
+        margin: 10px 0;
+        /* height: 80px; */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        /*  超出多少行 */
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+      .paging {
+        /* width: 164px; */
+      }
+      .paging > li,
+      .previous,
+      .next {
+        display: inline-block;
+
+        width: 33px;
+        height: 32px;
+        border-radius: 2px;
+        color: #909399;
+        background-color: #f6faf5;
+        text-align: center;
+        cursor: pointer;
+        margin: 20px 4px;
+        line-height: 32px;
+      }
+
+      .paging > li:hover,
+      .next:hover,
+      .previous:hover {
+        background: #1ea525;
+        color: #ffffff;
+      }
+      .active-page {
+        background: #1ea525 !important;
+        color: #ffffff !important;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <a
+        href="./index.html"
+        style="display: inline-block; cursor: pointer; z-index: 100"
+      >
+        <div class="nav-title">
+          <img style="width: 24px; height: 24px" src="./img/logo.svg" />安易智
+        </div>
+      </a>
+      <div class="menu">
+        <ul>
+          <li><a href="./index.html">首页</a></li>
+          <li><a href="./underwritingSystem.html">承统系统</a></li>
+          <li><a href="./claimsSystem.html">补偿系统</a></li>
+          <li><a href="./mobileoperatingSystem.html">移动作业</a></li>
+          <li class="active"><a href="./NewsCenter.html">新闻中心</a></li>
+          <li><a href="./aboutUs.htm">关于我们</a></li>
+        </ul>
+      </div>
+      <ul class="menu2">
+        <li><a href="./index.html">首页</a></li>
+        <li><a href="./underwritingSystem.html">承统系统</a></li>
+        <li><a href="./claimsSystem.html">补偿系统</a></li>
+        <li><a href="./mobileoperatingSystem.html">移动作业</a></li>
+        <li class="active"><a href="./NewsCenter.html">新闻中心</a></li>
+        <li><a href="./aboutUs.htm">关于我们</a></li>
+      </ul>
+    </div>
+    <div class="lunbotu"></div>
+    <div class="news-content">
+      <p>首页 / 新闻中心 / <span class="subtitle">行业新闻</span></p>
+      <div class="middle">
+        <div class="nav2">
+          <h1 class="title-h1">新闻类别</h1>
+          <h3 class="title-gs">公司新闻</h3>
+          <h3 class="title-hy">行业新闻</h3>
+        </div>
+        <div class="content">
+          <div class="industry" id="industry">
+            <div class="industry-0">
+              <div class="industry-item">
+                <div class="article-img">
+                  <img src="./img/91-10.jpg" />
+                </div>
+                <div class="article-font">
+                  <h3 class="article-title">统筹的几种经营模式浅析</h3>
+                  <p>
+                    统筹费分期业务的利与弊：很多统筹企业在做分期业务，客观上减轻了参统客户全额支付统筹费的资金压力，利于参统业务的引进和展业的积极性，这是利的一方面。相对来看，另一方面不利的是分期业务对统筹公司风控专业性和资金存量要求会更高，换句通俗话来说，分期缴费意味着统筹补偿基金存量（净费收入）的阶段性减少，业务存量（承统车辆）的持续不断增大，这需要很高超的风控计算方法来均衡现有资金与存量业务发生事故所需的补偿资金需要，公司有大量资金放这不动是可以的，如果满足不了这个要求，某一个分期业务出险后将统筹费全款补齐，从总体上也达不到公司承担风险责任所需的资金要求，这个结果就可想而知了。所以做好需要看实力，看资金安排！
+                  </p>
+                  <span>2022-10-08 12:55</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-11.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">统筹要不得的几种经营心理</h3>
+                  <p>
+                    保险主体公司及保险代理心理。统筹与保险有着本质区别，侧重点不同且适用法律条文不同，切不可以保险业思维做统筹，更不可以保险代理思维做市场。这种思维极易误导人民群众，误导自己，最终或是违法犯罪或是承担本不是自己该承担的后果。具体区别，可参考相关法条及网上的一些正向引导文章。...
+                  </p>
+                  <span>2022-09-15 19:58</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-12.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">统筹行业的痛点</h3>
+                  <p>
+                    统筹行业兴起和发展的近些年，为促进社会经济发展、运输行业安全稳定经营，贡献了很大力量，交通安全服务企业如雨后春笋，蓬勃发展起来。同时，我们也看到在近几年发展的过程中出现了各种各样的问题，任何行业都存在问题，看清问题症结，不断加以完善提升，这个行业会有更广阔的未来。就现阶段安全服务行业存在的问题，笔者认为主要集中在以下几个方面：...
+                  </p>
+                  <span>2022-08-19 10:57</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-13.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">统筹加科技的探索</h3>
+                  <p>
+                    交通安全统筹肩负着为运输企业及车辆、车主提供安全保障服务的职能，预防和降低交通事故发生，减少因交通事故给企业、车辆、车主带来的损失和资金、时间等经营成本，确保物流车辆尽快恢复正常运营，从而整体提升运输行业安全生产能力，促进运输行业健康高效发展。...
+                  </p>
+                  <span>2022-07-23 10:55</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-14.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">浅谈统筹软件的重要性</h3>
+                  <p>
+                    交通安全统筹肩负着为运输企业及车辆、车主提供安全保障服务的职能，预防和降低交通事故发生，减少因交通事故给企业、车辆、车主带来的损失和资金、时间等经营成本，确保物流车辆尽快恢复正常运营，从而整体提升运输行业安全生产能力，促进运输行业健康高效发展。...
+                  </p>
+                  <span>2022-06-15 18:32</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-15.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">统筹行业的前世今生</h3>
+                  <p>
+                    话说，“交通安全统筹”，出自于2013年国办发30号文中“鼓励运输企业采用交通安全统筹等形式，加强行业互助，提高企业抗风险能力”一言。溯源于90年代中期，随着国内经济的不断发展，道路交通运输行业的兴起，货运车辆交通事故呈不断上升趋势，危化品运输车辆、重特大交通事故难以有效降低，一旦发生事故，单依靠货运车辆本身解决后续问题，是无法有效解决问题的。业内看来，促进行业健康发展，提高运输企业及从业人员抗事故风险能力、较少和降低事故带来的经营困境为目标，国家从保险体制及企业内保方面，从无到有以及持续不断改革，做了相当大的工作。具体到统筹行业，自90年代云南省始，以政府行为组建交通安全统筹中心，将省内国有企业运输车辆为主，容纳个体货物运输车辆，以内保形式，建立行业统筹基金，用于弥补保险不足，抵御交通事故带来的行业风险，促进省内道路交通运输行业的良性发展。...
+                  </p>
+                  <span>2022-05-24 18:11</span>
+                </div>
+              </div>
+            </div>
+            <div class="industry-1">
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-16.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">再谈统筹之路</h3>
+                  <p>
+                    兴许是不同阶段，人的思维会跟着变化，之前对统筹行业的认知，民营统筹行业自17年逐步兴起以来，得益于商业险改革的不彻底，统筹业立足弥补商业险市场空缺，为广大商用车车主提供契约性质的安全补偿服务。行业巨大的现金流、短期快速的聚拢起来的资金池，几乎为零的行业门槛，吸引着越来越多的参与者。
+                  </p>
+                  <span>2022-04-26 13:36</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-17.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">三谈统筹之路</h3>
+                  <p>
+                    近期，网传山东省交通运输厅下发通知，要求各辖区摸排道路运输公司承统及参统数据情况，主要包括车辆数量、参统金额、理赔金额等，通知要求各单位召开相关企业座谈会，听取道路运输企业对交通安全统筹工作的意见和建议，提出今后工作中的监管意见和建议。...
+                  </p>
+                  <span>2022-04-26 15:44</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-18.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">统筹行业机遇与挑战</h3>
+                  <p>
+                    随着国内经济持续深化改革的推进，尤其是各领域供给侧改革的不断深入，特色社会主义经济的市场化，在于行政手段调控市场发展。
+                    市场化手段竞争谁说了算，本质上是谁手里掌握客户资源谁说了算。具体到保险和统筹行业，渠道代理、挂靠公司为主体的销售通道，几乎在市场化条件下能够具备左右阶段内主体公司定价、折扣和费用的话语权。他们成为这个行业中利益输送最多的环节，也是保费居高不下，社会认可度低，各主体公司收入赔付不成比例，矛盾问题频出的症结。
+                    现阶段，无论保险公司费改，还是银保监强力推进中间环节改革，都旨在降低中间环节和费用，还保险业普惠大众，促进社会和谐发展的本质。
+                    一定程度上，统筹行业的诞生和发展，弥补了这一改革过程中的不足，承担了社会润滑剂的作用，解决了很大一部分社会矛盾。但是从根本上，统筹行业还缺乏自己为主导的的市场和社会定位，与保险公司同样的靠市场化手段，改变不了道路交通安全保障领域尤其是商用车领域整体折扣、费用为主导的生存和竞争方式。
+                    改革的过程是全社会的改革，此时，更需头部企业和整个统筹行业抓住机遇，迎接挑战，合规经营
+                  </p>
+                  <span>2021-12-10 18:44</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-19.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">
+                    深度观察 | 营运货车：太难了，我们只是想买个保障！
+                  </h3>
+                  <p>
+                    “我最开始也没有想要买车辆统筹，可我的车在保险公司很难投保。”一位自卸车车主无奈地表示。
+                    近年来，机动车辆安全统筹（以下简称“车辆统筹”）悄然在营运货车领域落地生根，服务群体数量也日渐庞大。
+                    “车辆统筹”是什么？营运货车为什么“不选择”保险而去加入“车辆统筹”？面对市场庞大的营运货车保险市场，保险公司为什么不愿发力？究竟如何才能解决营运货车投保难、投保贵问题？统筹市场的现状？统筹如何规范化运营？带着疑问，我们进行了深入的了解。
+                    一、“车辆统筹”是什么？
+                  </p>
+                  <span>2021-11-22 17:23</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-20.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">统筹企业需拥有更多风险管理手段</h3>
+                  <p>
+                    “我们收到的车大多都是营运货车中，风险系数偏高的车，我们更需要风险管控的手段
+                    ”
+                    近年来，机动车辆安全统筹行业发展迅猛，在发展的过程中也遭遇各类问题，如“垃圾业务涌入”的同时缺乏“风险管理手段”，在这种情况下，很多统筹企业纷纷将目光投向“AI主动安全预警系统”，以期通过这一技术创新的手段，解决安全风控问题。
+                    那么“AI主动安全预警系统”是什么？由哪些软、硬件构成？DVR、ADAS、DSM、BSD分别能起到什么作用？为什么越来越多的统筹企业、交通运输企业会投以青睐？“
+                    带着这些问题，让我们一起做个整体的了解。
+                  </p>
+                  <span>2021-11-21 14:20</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">交通安全统筹存在是否是必要的？</h3>
+                  <p>
+                    交通安全统筹工作始终贯穿于安全管理机制的全过程，既坚持“安全一，预防为主”的方针，切实加强安全监督，不断加大安全设施的投入，又注重事故发生后的善后处理，确保社会稳定，最终达到“安全保统筹，统筹促安全”的目的。',
+                    交通安全统筹着眼于为政府排忧解难，为企业保驾护航，全面保障事故当事人的合法权益。
+                  </p>
+                  <span>2021-10-17 15:25</span>
+                </div>
+              </div>
+            </div>
+            <div class="industry-2">
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-2.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">
+                    商业保险与车辆统筹是否有共舞可行性？
+                  </h3>
+                  <p>
+                    车辆统筹，师出有名，但是目前市场上的车辆统筹的类商业保险模式不可行，一是法律不允许，涉嫌非法经营商业保险;二是商业模式不可持续。
+                    那车辆统筹的未来是什么，我认为是自保管理公司(Captive
+                    Management
+                    Companies)。即以独立项目的方式，帮助有自保或者互助需求的车队，做保险服务，不承担保险风险，提供保险管理服务。
+                    客观的说，车辆统筹帮助行业分担了营运车拒保的舆情压力，虽然是短期内的饮鸩止渴，因为车辆统筹玩不转低频高损的营运车业务。
+                    财险行业肯定不喜欢车辆统筹来虎口抢食，但车辆统筹并非必然非法经营，而且有国务院文件给予的“出生证”，因此行业可能需要考虑如何与之共舞。
+                    以车险为例，车损险的免赔额部分就给车辆统筹提供了合适的空间，低频高损也正是互助最偏好的领域；但是三责险部分，目前还没有合作的空间，责任限额之上的更高部分，车辆统筹明显难以胜任。但行业会不会随着改革深化，放开产品，也未可知。比如车辆统筹负责三者责任限额底层的20万或者50万部分，更上面的限额由商业保险承担？
+                    车辆统筹的模式：目前大货车的车辆统统筹在某些省份已实施多年，已具备一定的体量。他的优势是费用比商业险保费低，但是缺乏政府的系统的强有力的管控
+                  </p>
+                  <span>2021-09-17 15:03</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-3.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">
+                    统筹车险与其他车险的区别有什么？
+                  </h3>
+                  <p>
+                    车辆统筹指的是汽车的统筹保险，它是属于一种共同保险，指的是交通厅及原直属企事业单位要根据自己拥有的汽车数量，为其缴纳相应的交通安全统筹费。缴纳了交通安全统筹费的汽车，在遭遇交通事故、受到自然灾害、旅客意外伤害等造成损失时，可以获得相应的经济赔偿，并且这部分经济赔偿是从安全统筹的费用中支出的
+                  </p>
+                  <span>2021-08-17 14:55</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-4.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">车辆统筹如何降低保险成本？</h3>
+                  <p>
+                    在汽车销量进入负增长的背景下，车险存量市场逐渐成为各家财险公司的“必争之地”。业界人士认为，要想在竞争中存活，财险公司需要考虑“开源”与“节流”。',
+                    '“开源”方面，由于新车业务不再易得，所以交通安全统筹公司必须要有更精细化的策略，以维系存量客户，获得转保客户，使车险产品能够更好地服务消费者。
+                  </p>
+                  <span>2021-07-16 14:29</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-5.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">车辆统筹是什么？</h3>
+                  <p>
+                    发生事故时，补偿您自己车辆的损失。例如车辆发生碰撞、倾覆、火灾、爆炸，或被外界物体倒塌、坠物砸坏，以及与别人车辆发生碰撞，造成自己的车辆受损等，公司将按照条款赔偿您的车辆维修费用。
+                  </p>
+                  <span>2021-06-29 10:44</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-6.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">交通安全统筹工作是否合规？</h3>
+                  <p>
+                    政府相关部门十分重视统筹工作的健康发展，由职能部门和专人定期深入企业监督检查。道路交通安全互助统筹是交通运输行业的内控机制。安全统筹着眼于为政府排忧解难，为企业保驾护航，保障事故当事人的合法权益。统筹费作为交通事故处理专用基金，进行专项管理，实行收支两条线，统筹单位为运输企业和统户提供服务,统筹工作是安全方面的系统性管理。统筹具有行政约束力，最大限度地让参统企业车辆的事故经济赔偿款落到实处。把统户满意不满意作为工作的标准。安全统筹正以它的贴心服务越来越深入人心，得到了社会各界和广大参统人的认可和好评
+                  </p>
+                  <span>2021-05-28 10:43</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-7.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">交通安全统筹市场前景怎么样？</h3>
+                  <p>
+                    多年来，全国范围内公路运输存在事故多、伤亡大的问题。近些年，在全省各类安全事故伤亡中，交通安全事故伤亡约占80%。频繁的交通安全事故，加上商业保险功能的缺失，急于寻求一种有别于普通商业保险，寓安全管理和自我保险为一体的安全管理新体制，需要建立一个既有安全管理、安全教育、车辆维修与检验等职能，又能在事故发生后及时抢救伤员、查勘现场、救助车辆、定损理赔、处理善后事宜一条龙服务的安全保障机构，解决突出的事故赔付问题，十分迫切
+                  </p>
+                  <span>2021-04-13 10:41</span>
+                </div>
+              </div>
+            </div>
+            <div class="industry-3">
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-8.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">如何理解交通安全统筹</h3>
+                  <p>
+                    随着经济不断的发展，交通运输的不断扩大。在交通运输行业中，服务是必不可少的。那么根据不同车种的分类和车主以及相关企业的需求不同，又出现的交通统筹服务为代表的相关形态。很多人对交通统筹还并不完全了解。
+                    交通安全统筹是国家改革发展过程中产生的新生事物，是国务院
+                    文件明确的一项倡导在交通运输企业开展行业互助性质的举措，也可以称为大车统筹或者货车统筹，属于机动车交通运输过程中的一种安全保障机制。具有风险理赔功能，是一项针对交通运输这种高风险行业特点，为确保交通运输系统安全生产而产生的保障措施。
+                    交通安全统筹工作始终贯穿于安全管理机制的全过程，既坚持
+                    “安全第一，预防为主”的方针，切实加强安全监督，不断加大安全设施的投入，又注重事故发生后的善后处理，确保社会稳定，最终达到“安全保统筹，统筹促安全”的目的。
+                    交通安全统筹着眼于为政府排忧解难，为企业保驾护航，全面保障事故当事人的合法权益。对发生的责任事故提供从伤员救护，现场勘查，车辆救助，设备维修，定损理赔到善后处理，防灾减损，宣传教育，安全培训等一条龙服务。
+                    交通安全统筹的实质是通过经济杠杆和一定行政手段的双重作用，
+                  </p>
+                  <span>2021-03-17 14:55</span>
+                </div>
+              </div>
+              <div class="industry-item">
+                <div class="article-img"><img src="./img/91-9.jpg" /></div>
+                <div class="article-font">
+                  <h3 class="article-title">什么叫统筹车辆</h3>
+                  <p>
+                    统筹车辆只是一个术语。统筹车辆制度要求省交通厅及原直属企事业单位按照自己拥有的车辆的数目，缴纳相应的交通安全统筹费。这笔费用主要用于参加交通统筹的车辆在遭遇交通事故及受到自然灾害、旅客意外伤害等情况后的各种经济赔偿。统筹，从表层意义来看，就是统一筹划的意思。
+                    从深层来看，它包括了一个过程的五个步骤：（1）统一筹测(预测)。（2）统一筹划(计划)。（3）统筹安排(实施)。（4）统一运筹(指挥)。（5）统筹兼顾(掌控)。
+                  </p>
+                  <span>2021-03-17 14:55</span>
+                </div>
+              </div>
+            </div>
+            <!-- 分页 -->
+            <div style="display: flex; justify-content: center">
+              <div class="previous"><</div>
+              <ul class="paging"></ul>
+              <div class="next">></div>
+            </div>
+          </div>
+          <!-- 公司新闻 -->
+          <div class="company"></div>
+        </div>
+      </div>
+    </div>
+    <div class="boottom">
+      <div
+        style="
+          width: 90%;
+          max-width: 1200px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+        "
+      >
+        <div class="boottom-content">
+          <div>
+            <h3>产品中心</h3>
+            <p><a href="./underwritingSystem.html">承统系统</a></p>
+            <p><a href="./claimsSystem.html">补偿系统</a></p>
+            <p><a href="./mobileoperatingSystem.html">移动作业</a></p>
+          </div>
+          <div>
+            <h3>新闻中心</h3>
+            <p><a href="./NewsCenter.html">新闻公司</a></p>
+            <p><a href="./NewsCenter.html">行业新闻</a></p>
+          </div>
+          <div>
+            <h3>关于我们</h3>
+            <p><a href="./aboutUs.htm">团队介绍</a></p>
+          </div>
+          <div>
+            <h3>联系我们</h3>
+            <p>官方邮箱：anyizhi888@foxmail.com</p>
+            <p>QQ：1624924890</p>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          width: 90%;
+          max-width: 1200px;
+          height: 1px;
+          background-color: #4d4d4d;
+          margin: 0 auto;
+          margin-bottom: 38px;
+        "
+      ></div>
+      <div style="color: #9e9e9e; text-align: center; width: 100%">
+        安易智@2018~2023版权所有
+      </div>
+    </div>
+    <script type="text/javascript" src="js/NewsDetail.js"></script>
+
+    <script>
+      // 点击行业新闻或点击公司新闻
+      var gs = document.querySelector(".title-gs");
+      var hy = document.querySelector(".title-hy");
+      var industry = document.querySelector(".industry");
+      var company = document.querySelector(".company");
+      var subtitle = document.querySelector(".subtitle");
+      hy.style.fontWeight = 600;
+      gs.style.color = "#999999";
+      hy.style.color = "#2E2E2E";
+      company.style.display = "none";
+      gs.onclick = function () {
+        gs.style.fontWeight = 600;
+        hy.style.fontWeight = 400;
+        hy.style.color = "#999999";
+        gs.style.color = "#2E2E2E";
+        subtitle.innerHTML = "公司新闻";
+        company.style.display = "block";
+        industry.style.display = "none";
+      };
+      hy.onclick = function () {
+        hy.style.fontWeight = 600;
+        gs.style.fontWeight = 400;
+        gs.style.color = "#999999";
+        hy.style.color = "#2E2E2E";
+        subtitle.innerHTML = "行业新闻";
+        industry.style.display = "block";
+        company.style.display = "none";
+      };
+
+      // 点击文章
+      let itemList = document.getElementsByClassName("industry-item");
+      console.log(itemList);
+      for (var i = 0; i < itemList.length; i++) {
+        itemList[i].index = i;
+        // let this_ = itemList[i]
+        // console.log(itemList[i]);
+        itemList[i].addEventListener("click", function () {
+          // alert(this.index, "g");
+          console.log(this.index);
+          sessionStorage.setItem("NewsCenterKey", this.index);
+          window.location = "./NewsDetail.html";
+        });
+      }
+
+      // 分页
+      const pageSize = 4;
+      const paging = document.querySelector(".paging");
+      const industry0 = document.querySelector(".industry-0");
+      const industry1 = document.querySelector(".industry-1");
+      const industry2 = document.querySelector(".industry-2");
+      const industry3 = document.querySelector(".industry-3");
+      for (let i = 1; i <= pageSize; i++) {
+        let li = document.createElement("li");
+        // 默认值
+        // console.log(i,11);
+        if (i == 1) {
+          li.classList.add("active-page");
+        } else {
+          // 除了第一个 其它不展示
+          industry1.style.display = "none";
+          industry2.style.display = "none";
+          industry3.style.display = "none";
+        }
+        li.innerHTML = i;
+        li.index = i;
+        paging.appendChild(li);
+
+        li.addEventListener("click", function (e) {
+          // 添加 calss 标识    isShow 为 true 表示展示第一页
+          paging.childNodes[i - 1].classList.add("isShow");
+          for (let j = 0; j < paging.childNodes.length; j++) {
+            if (paging.childNodes[j].className.indexOf("isShow") != -1) {
+              document.querySelector(".industry-" + j).style.display = "flex";
+            }
+            if (paging.childNodes[j].className.indexOf("isShow") == -1) {
+              document.querySelector(".industry-" + j).style.display = "none";
+            }
+            paging.childNodes[j].className = "";
+          }
+          paging.childNodes[i - 1].classList.add("active-page");
+        });
+      }
+      // 上一页 下一页
+      const arr = [industry0, industry1, industry2, industry3];
+      const previous = document.querySelector(".previous");
+      const next = document.querySelector(".next");
+
+      previous.onclick = function () {
+        const activePage = document.querySelector(".active-page");
+        console.log("activePage", activePage.index);
+        if (activePage.index !== 1) {
+          paging.children[activePage.index - 1].className = "";
+          paging.children[activePage.index - 2].classList.add("active-page");
+          arr[activePage.index - 1].style.display = "none";
+          arr[activePage.index - 2].style.display = "flex";
+        }
+      };
+      next.onclick = function () {
+        const activePage = document.querySelector(".active-page");
+        console.log("activePage", activePage.index);
+        if (activePage.index !== 4) {
+          paging.children[activePage.index - 1].className = "";
+          paging.children[activePage.index].classList.add("active-page");
+          arr[activePage.index - 1].style.display = "none";
+          arr[activePage.index].style.display = "flex";
+        }
+      };
+    </script>
+  </body>
+</html>

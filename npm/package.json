@@ -1,0 +1,23 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "666",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  // 记录当前项目的依赖
+  "dependencies": {
+
+  },
+  // 记录当前看项目用到的开发依赖（上线不需要）
+  "devDependencies": {
+
+  }
+  // npm install xxx -S (-save开发依赖)
+  // nrm 换源
+
+}

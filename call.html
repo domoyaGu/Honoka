@@ -1,0 +1,24 @@
+<script>
+    ;(function() {
+        // 接收实参
+        // 1. 通过形参
+        // 2. 通过...args
+        // 3. arguments 伪数组
+        function mycall(context) {
+            context = context ? Object(context) : window
+            let args = []
+            for (let i = 1; i < arguments.length; i++) {
+                args.push(arguments[i])
+            }
+            context.f = this
+            if (!args) {
+                context.f()
+            }
+            let res = context.f(...args)
+            delete context.f
+            return res
+        }
+        Function.prototype.mycall = mycall
+    })()
+
+</script>

@@ -1,0 +1,9 @@
+<!--pages/user/user.wxml-->
+
+绿豆汤杯数：{{ count }}
+<input cursor-spacing="100" type="number" class="weui-input"
+ placeholder="请输入" value="{{ count }}"/>
+
+<button type="primary" bindtap="addnumber">
+	确定
+</button>

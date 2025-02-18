@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "登录注册",
+  "navigationBarBackgroundColor": "#ffaa00",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

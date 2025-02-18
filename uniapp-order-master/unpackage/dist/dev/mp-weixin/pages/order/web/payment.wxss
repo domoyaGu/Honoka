@@ -1,0 +1,21 @@
+@charset "UTF-8";
+/* 水平间距 */
+/* 水平间距 */
+.payment.data-v-dd0dd63e {
+  padding: 20px;
+}
+.payment-top .top-upper view.data-v-dd0dd63e {
+  font-size: 18px;
+}
+.payment-top .top-upper text.data-v-dd0dd63e {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.payment-center.data-v-dd0dd63e {
+  margin-top: 20px;
+  padding: 10px;
+}
+.payment-center text.data-v-dd0dd63e {
+  font-size: 22px;
+}
+

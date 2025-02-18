@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>testa</title>
+</head>
+<script>
+$nextTick(() => {
+    
+window.onload = function() {
+  document.getElementById('ifr').contentWindow.postMessage('我是要经过传递的数据', 'https://dev-static.yitongchou.com/file/74cd32da3d5504e58d06a55adabc5c4f/%E6%8A%A5%E4%BB%B7%E5%8D%95%E6%A8%A1%E6%9D%BF+%286%29286c1c46a74649c6a6f8a4948f909765.docx');
+};
+
+window.addEventListener('message', function(event) {
+    console.log(event)
+  // 通过origin属性判断消息来源地址
+  if (event.origin === 'http://192.168.1.152:8080') {
+    alert(event.data); 
+  }
+}, false);
+})
+</script>
+<body>
+  <iframe id="ifr" src="https://dev-static.yitongchou.com/file/74cd32da3d5504e58d06a55adabc5c4f/%E6%8A%A5%E4%BB%B7%E5%8D%95%E6%A8%A1%E6%9D%BF+%286%29286c1c46a74649c6a6f8a4948f909765.docx"></iframe>
+</body>
+</html>

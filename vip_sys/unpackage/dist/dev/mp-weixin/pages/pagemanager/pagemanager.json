@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "首页展示管理",
+  "navigationBarBackgroundColor": "#ffaa00",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}

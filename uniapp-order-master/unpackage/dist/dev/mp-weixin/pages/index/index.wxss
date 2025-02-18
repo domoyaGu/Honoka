@@ -1,0 +1,15 @@
+
+.shop-cart {
+	position: fixed;
+	right: 20px;
+	bottom: 70px;
+	z-index: 999;
+}
+.cart {
+	font-size: 50px !important;
+	color: #ccc !important;
+}
+.cart-active {
+	color: #ffbe11 !important;
+}
+

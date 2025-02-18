@@ -1,0 +1,64 @@
+<h3><span style="font-size: 16px; font-family: 'Microsoft YaHei';">环境准备</span></h3>
+<p><span style="font-size: 16px; font-family: 'Microsoft YaHei';">node任意版本。</span></p>
+<p><span style="font-size: 16px; font-family: 'Microsoft YaHei';">node包：exp</span><span style="font-size: 16px; font-family: 'Microsoft YaHei';">ress、http-proxy-middleware、http。</span></p>
+<p><span style="font-size: 16px; font-family: 'Microsoft YaHei';">提前下载好包：</span></p>
+<div class="cnblogs_code">
+<pre>npm install express --<span style="color: #000000;">save
+npm install http</span>-proxy-middleware --<span style="color: #000000;">save
+npm install http </span>--save</pre>
+</div>
+<h4><span style="font-size: 16px; font-family: 'Microsoft YaHei';">目录结构</span></h4>
+<p><span style="font-family: 'Microsoft YaHei'; font-size: 16px;">主要代码在server.js中，index.html为测试用的项目启动页，与server.js无关。</span></p>
+<p><img src="https://img2024.cnblogs.com/blog/2001819/202401/2001819-20240105151033273-1219743005.png" alt="" loading="lazy" /></p>
+<h4><span style="font-size: 16px; font-family: 'Microsoft YaHei';">主要代码（server.js）</span></h4>
+<div class="cnblogs_code">
+<pre>const express = require('express'<span style="color: #000000;">);  
+const app </span>=<span style="color: #000000;"> express();  
+const http </span>= require('http'<span style="color: #000000;">).createServer(app);  
+const port </span>= 8777; <span style="color: #008000;">//</span><span style="color: #008000;"> 端口，自定义 </span>
+const { createProxyMiddleware } = require('http-proxy-middleware'<span style="color: #000000;">);  
+  
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 创建代理中间件  </span>
+const proxy =<span style="color: #000000;"> createProxyMiddleware({  
+  target: </span>'http://192.168.3.114:8009', <span style="color: #008000;">//</span><span style="color: #008000;"> 目标地址  </span>
+  changeOrigin: <span style="color: #0000ff;">true</span>, <span style="color: #008000;">//</span><span style="color: #008000;"> 开启代理后是否改变请求头中的 Host 字段  </span>
+<span style="color: #000000;">  pathRewrite: {  
+    </span>'^/api/': '/', <span style="color: #008000;">//</span><span style="color: #008000;"> 将所有以 /api/ 开头的请求路径重写为 / 开头的请求路径  </span>
+<span style="color: #000000;">  },  
+});  
+  
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 在应用中使用代理中间件  </span>
+app.use('/api'<span style="color: #000000;">, proxy);  
+
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 指定index.html文件作为默认路由  </span>
+app.get('/', <span style="color: #0000ff;">function</span><span style="color: #000000;">(req, res) {
+  res.sendFile(__dirname </span>+ '/index.html'); <span style="color: #008000;">//</span><span style="color: #008000;"> __dirname为node自带的当前目录，可更改为目标目录</span>
+<span style="color: #000000;">});
+  
+</span><span style="color: #008000;">//</span><span style="color: #008000;"> 启动本地服务并监听指定端口  </span>
+http.listen(port, <span style="color: #0000ff;">function</span><span style="color: #000000;">() {  
+  console.log(`Server started on port ${port}`);  
+});</span></pre>
+</div>
+<p><span style="font-family: 'Microsoft YaHei'; font-size: 16px;">在index.html中用xhr直接调用(以某个post请求为例)：</span></p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">//</span><span style="color: #008000;"> 创建XMLHttpRequest对象  </span>
+      <span style="color: #0000ff;">var</span> xhr = <span style="color: #0000ff;">new</span><span style="color: #000000;"> XMLHttpRequest();
+      </span><span style="color: #008000;">//</span><span style="color: #008000;"> 设置请求方法和URL（这里尤其注意需要添加匹配字符串，上面server.js中配置的是/api，不然不会识别）</span>
+      xhr.open("POST", "/api/test"<span style="color: #000000;">);
+      </span><span style="color: #008000;">//</span><span style="color: #008000;"> 设置请求头部信息</span>
+      <span style="color: #008000;">//</span><span style="color: #008000;"> xhr.setRequestHeader('Content-Type', 'application/json');</span>
+      <span style="color: #008000;">//</span><span style="color: #008000;"> 发送请求</span>
+<span style="color: #000000;">      xhr.send(JSON.stringify(data));
+      </span><span style="color: #008000;">//</span><span style="color: #008000;"> 添加回调函数处理响应数据</span>
+      xhr.onload = <span style="color: #0000ff;">function</span><span style="color: #000000;">() {  
+        </span><span style="color: #0000ff;">if</span> (xhr.status === 200<span style="color: #000000;">) {
+          </span><span style="color: #008000;">//</span><span style="color: #008000;"> 请求成功，处理响应数据</span>
+<span style="color: #000000;">          console.log(data);
+        } </span><span style="color: #0000ff;">else</span><span style="color: #000000;"> {
+          </span><span style="color: #008000;">//</span><span style="color: #008000;"> 请求失败，处理错误信息  </span>
+          console.error("请求失败：" +<span style="color: #000000;"> xhr.statusText);
+        }
+      };</span></pre>
+</div>
+<p>&nbsp;</p>

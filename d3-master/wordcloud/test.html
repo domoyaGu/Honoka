@@ -1,0 +1,85 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+
+</head>  
+<body>
+</body>
+<script src="d3.js"></script>
+	<script src="build/d3.layout.cloud.js"></script>
+  <script>
+  var width = 1000
+  var height = 1000
+  
+  // 创建SVG元素  
+var svg = d3.select("body")  
+    .append("svg")  
+    .attr("width", width)  
+    .attr("height", height);
+  
+// 创建力导向图模拟  
+var simulation = d3.forceSimulation()  
+    .force("link", d3.forceLink().id(function(d) { return d.id; }))  
+    .force("charge", d3.forceManyBody())  
+    .force("center", d3.forceCenter(width / 2, height / 2));  
+  
+// 创建链接数据  
+var links = [  
+    { source: "Node 1", target: "Node 2" },  
+    { source: "Node 2", target: "Node 3" },  
+    { source: "Node 3", target: "Node 4" },  
+    { source: "Node 4", target: "Node 1" }  
+];  
+  
+// 创建节点数据  
+var nodes = [  
+    { id: "Node 1" },  
+    { id: "Node 2" },  
+    { id: "Node 3" },  
+    { id: "Node 4" }  
+];  
+  
+// 创建力导向图数据  
+var link = svg.append("g")  
+    .attr("stroke", "#999")  
+    .attr("stroke-opacity", 0.6)  
+    .selectAll("line")  
+    .data(links)  
+    .enter().append("line");  
+  
+var node = svg.append("g")  
+    .attr("stroke", "#fff")  
+    .attr("stroke-width", 1.5)  
+    .selectAll("circle")  
+    .data(nodes)  
+    .enter().append("circle")  
+    .attr("r", 5);  
+  
+// 在节点上添加文本  
+node.append("text")  
+    .text(function(d) { return d.id; })  
+    .attr("text-anchor", "middle")  
+    .attr("fill", "#000");  
+  
+// 运行模拟  
+simulation.nodes(nodes)  
+    .on("tick", ticked);  
+  
+simulation.force("link")  
+    .links(links);  
+  
+function ticked() {  
+    link  
+        .attr("x1", function(d) { return d.source.x; })  
+        .attr("y1", function(d) { return d.source.y; })  
+        .attr("x2", function(d) { return d.target.x; })  
+        .attr("y2", function(d) { return d.target.y; });  
+  
+    node  
+        .attr("cx", function(d) { return d.x; })  
+        .attr("cy", function(d) { return d.y; });  
+}
+</script>
+
+  </style>  
+</html>

@@ -1,0 +1,1 @@
+export { perm } from './permission';

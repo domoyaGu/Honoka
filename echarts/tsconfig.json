@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "isolatedModules": true,
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": false, // js/ts混用时设为false
+    "noImplicitThis": true, // js/ts 混用时设为false
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "baseUrl": "./",
+    "paths": { // 配置路径解析别名，需要为TS再配置一遍
+      "@/*": ["src/*"],
+      "img/*": ["src/assets/images/*"],
+      "store/*": ["src/store/*"]
+    },
+    "allowSyntheticDefaultImports": true, // 默认导入
+    "skipLibCheck": true, // 不对第三方依赖类型检查 ，element-plus 生产打包报错
+    "types": ["element-plus/global"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx",
+    "auto-imports.d.ts",
+    "components.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}

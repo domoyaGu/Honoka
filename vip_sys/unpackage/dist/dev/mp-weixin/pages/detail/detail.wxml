@@ -1,0 +1,1 @@
+<view class="content" style="{{'height:'+(windowHeight+'rpx')+';'}}"><scroll-view class="scroll-view" style="{{'height:'+(scrollHeight+'rpx')+';'}}" scroll-y="true"><image class="image-view" src="{{imgURL}}" mode="widthFix"></image></scroll-view></view>

@@ -1,0 +1,284 @@
+@import 'src/styles/variables.module';
+@import './mixin.scss';
+@import './transition.scss';
+@import 'src/styles/element-plus';
+@import './sidebar.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, Arial, sans-serif;
+}
+
+* {
+  /* Chrome浏览器隐藏滚轮 */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,img{
+  padding: 0;
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: ' ';
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+}
+
+.page-container {
+  padding: 20px;
+}
+
+.tc{
+  text-align: center;
+}
+.tl{
+  text-align: left;
+}
+.tr{
+  text-align: right;
+}
+
+// 弹性布局
+.display-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 圆角面板
+.wrap-container {
+  margin: 16px;
+  color: #333;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+// 筛选
+.search-top {
+  display: flex;
+  margin-bottom: 24px;
+  .search-title {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  .search-button {
+    margin-left: auto;
+  }
+}
+.search-bottom {
+  width: 100%;
+  padding: 0 10px;
+}
+
+// 图标
+.v-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+}
+
+.v-icon>svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 表单项样式
+.el-form-item__label {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+// 弹窗
+.dialog-title {
+  display: flex;
+  align-items: center;
+
+  .dialog-border {
+    width: 5px;
+    height: 16px;
+    border-radius: 5px;
+    margin-right: 5px;
+    background: #1891ff;
+  }
+}
+
+// 列表页
+.screen {
+  background: #fff;
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  .title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+}
+
+// 详情页
+.detail {
+  padding: 16px;
+}
+
+// 详情页 卡片组件
+.detail-card {
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin-bottom: 16px;
+}
+.title-one {
+  height: 24px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 1px 0px rgba(240, 240, 240, 0.7);
+  border-radius: 8px 8px 0px 0px;
+  .border{
+    background: #2A63F6;
+    width: 6px;
+    height: 20px;
+    border-radius: 30px;
+  }
+  h1{
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}
+.title-tow {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+// 统筹单详情
+.tc-detail-container {
+  
+  .tc-detail-card {
+    border-radius: 8px;
+    margin-top: 10px;
+    .card-title {
+      font-size: 18px;
+      font-weight: bold;
+      padding-bottom: 15px;
+      border-bottom: 1px #EBEEF5 solid;
+      .text {
+        padding-left: 15px;
+        border-left: 5px #2A63F6 solid;
+      }
+    }
+    .tc-detail-content {
+      padding: 16px 28px;
+    }
+  }
+}
+
+// 收起 展开
+.open-put {
+  width: 100%;
+  color: #2a63f6;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  cursor: pointer;
+  .symbol {
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 5px;
+    transition: transform 0.5s;
+  }
+  .trans {
+    transform: rotate(180deg)
+  }
+}
+
+// 展开收起内容
+.form-container {
+  padding:0 56px;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+// 查勘页面公用新增按钮样式
+.survey-loss-add-btn {
+  cursor: pointer;
+  height: 32px;
+  padding: 0 16px;
+  border: 1px #2A63F6 solid;
+  color: #2A63F6;
+  background-color: #E3F1FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  width: fit-content;
+}
+

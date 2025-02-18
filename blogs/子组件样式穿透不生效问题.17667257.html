@@ -1,0 +1,14 @@
+<p>今天用element-plus的抽屉el-drawer组件，写了一个自定义的子组件，父组件为外层的detail.vue文件。</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202308/2001819-20230830145515109-1242630950.png" alt="" loading="lazy" /></p>
+<p>&nbsp;默认的el-drawer内有padding</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202308/2001819-20230830145637232-393520271.png" alt="" loading="lazy" /></p>
+<p>&nbsp;然后在detailDrawer.vue组件里，用deep穿透，怎么也覆盖不了，都没有识别到，我甚至用了important，也试过删除scoped都没有效果（这个没效果我是没想到的）。</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202308/2001819-20230830145730138-656953914.png" alt="" loading="lazy" /></p>
+<p>&nbsp;最后只能在父组件detail.vue，正常用deep穿透就行，这个好像是dom挂载的问题还是什么，等这边项目做完后再进行深究。</p>
+<p>&nbsp;</p>
+<p>最好的解决方案：</p>
+<p>子组件不要直接用element元素作为模板的最外层，如图</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202308/2001819-20230830150706399-1325540665.png" alt="" loading="lazy" /></p>
+<p>上述的做法就会产生这个问题，在外层套一层div就可以直接在当前组件中正常用deep穿透</p>
+<p><img src="https://img2023.cnblogs.com/blog/2001819/202308/2001819-20230830150823680-933272083.png" alt="" loading="lazy" /></p>
+<p>&nbsp;</p>

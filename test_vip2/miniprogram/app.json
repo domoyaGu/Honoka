@@ -1,0 +1,14 @@
+{
+	"pages": [
+		"pages/user/user"
+	],
+	"window": {
+		"navigationBarTextStyle": "white"
+	},
+	"useExtendedLib": {
+		"weui": true
+	},
+	"style": "v2",
+	"sitemapLocation": "sitemap.json",
+	"lazyCodeLoading": "requiredComponents"
+}
